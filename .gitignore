@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+outputs/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.engine
+*.plan
+*.zip

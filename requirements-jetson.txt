@@ -1,0 +1,7 @@
+# PLATFORM-SPECIFIC RECONSTRUCTED NAMES ONLY; NOT AN INSTALL-TESTED LOCK
+# Obtain TensorRT/PyCUDA from the matching authorized JetPack environment.
+onnx
+onnxsim
+nvidia-modelopt
+pycuda
+# TensorRT runtime itself is platform-managed; do not pip-upgrade JetPack implicitly.
