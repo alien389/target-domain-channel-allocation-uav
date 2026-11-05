@@ -1,5 +1,7 @@
 # Target-Domain Dependency-Aware Channel Allocation for Efficient UAV Object Detection
 
+[![DOI](https://zenodo.org/badge/1446759706.svg)](https://doi.org/10.5281/zenodo.23977144)
+
 Source code, recorded configurations, software requirements and exact dataset
 split definitions supporting the research study. The repository includes the
 channel-allocation search and the additional comparative/ablation methods in a
