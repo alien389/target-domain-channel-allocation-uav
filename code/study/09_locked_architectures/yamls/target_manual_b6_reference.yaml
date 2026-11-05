@@ -1,0 +1,252 @@
+schema: locked_dependency_width_architecture_v1
+model_name: TargetManual-B6-reference
+candidate_id: F2PHYS-AEA2D0A18DAC15E4
+nc: 10
+input_shape:
+- 1
+- 3
+- 640
+- 640
+architecture_signature_sha256: AEA2D0A18DAC15E40091E474DBF688A98FCA2B6CFF8D4D3F4845165C59244F5D
+params_exact_integer: 2513743
+flops_raw_exact_integer: 7643616000
+flops_g_full_precision: '7.643616'
+dependency_group_order:
+- DG-001
+- DG-002
+- DG-003
+- DG-004
+- DG-005
+- DG-006
+- DG-007
+- DG-008
+- DG-009
+- DG-010
+- DG-011
+- DG-012
+- DG-013
+- DG-014
+- DG-015
+- DG-016
+- DG-017
+- DG-018
+- DG-019
+- DG-020
+- DG-021
+- DG-022
+- DG-023
+- DG-024
+- DG-025
+- DG-026
+- DG-027
+- DG-028
+- DG-029
+- DG-030
+- DG-031
+- DG-032
+- DG-033
+- DG-034
+- DG-035
+retained_widths:
+  DG-001: 32
+  DG-002: 56
+  DG-003: 32
+  DG-004: 64
+  DG-005: 32
+  DG-006: 48
+  DG-007: 64
+  DG-008: 128
+  DG-009: 64
+  DG-010: 256
+  DG-011: 32
+  DG-012: 248
+  DG-013: 120
+  DG-014: 384
+  DG-015: 144
+  DG-016: 384
+  DG-017: 192
+  DG-018: 176
+  DG-019: 384
+  DG-020: 120
+  DG-021: 80
+  DG-022: 128
+  DG-023: 88
+  DG-024: 128
+  DG-025: 64
+  DG-026: 72
+  DG-027: 64
+  DG-028: 48
+  DG-029: 48
+  DG-030: 40
+  DG-031: 8
+  DG-032: 96
+  DG-033: 112
+  DG-034: 40
+  DG-035: 24
+channel_identity_policy: frozen target-domain Taylor retained channel indices
+dependency_manifest: ${STUDY_ROOT}\03a_taylor_dependency_gene_space\gene_space_R1\gene_space_manifest_R1.json
+dependency_manifest_sha256: 27E0CA4844F076AB3D87B775FAB1566E8BEF9CA608D39AFDDA84BFB2070B67E2
+base_model_yaml:
+  nc: 10
+  depth_multiple: 0.33
+  width_multiple: 0.5
+  anchors:
+  - - 10
+    - 13
+    - 16
+    - 30
+    - 33
+    - 23
+  - - 30
+    - 61
+    - 62
+    - 45
+    - 59
+    - 119
+  - - 116
+    - 90
+    - 156
+    - 198
+    - 373
+    - 326
+  backbone:
+  - - -1
+    - 1
+    - Conv
+    - - 64
+      - 6
+      - 2
+      - 2
+  - - -1
+    - 1
+    - Conv
+    - - 128
+      - 3
+      - 2
+  - - -1
+    - 3
+    - C3
+    - - 128
+  - - -1
+    - 1
+    - Conv
+    - - 256
+      - 3
+      - 2
+  - - -1
+    - 6
+    - C3Lite
+    - - 256
+  - - -1
+    - 1
+    - Conv
+    - - 512
+      - 3
+      - 2
+  - - -1
+    - 9
+    - C3Lite
+    - - 512
+  - - -1
+    - 1
+    - Conv
+    - - 768
+      - 3
+      - 2
+  - - -1
+    - 3
+    - C3Lite
+    - - 768
+  - - -1
+    - 1
+    - SPPF
+    - - 768
+      - 5
+  head:
+  - - -1
+    - 1
+    - Conv
+    - - 384
+      - 1
+      - 1
+  - - -1
+    - 1
+    - nn.Upsample
+    - - None
+      - 2
+      - nearest
+  - - - -1
+      - 6
+    - 1
+    - Concat
+    - - 1
+  - - -1
+    - 3
+    - C3
+    - - 384
+      - false
+  - - -1
+    - 1
+    - Conv
+    - - 256
+      - 1
+      - 1
+  - - -1
+    - 1
+    - nn.Upsample
+    - - None
+      - 2
+      - nearest
+  - - - -1
+      - 4
+    - 1
+    - Concat
+    - - 1
+  - - -1
+    - 3
+    - C3
+    - - 256
+      - false
+  - - -1
+    - 1
+    - Conv
+    - - 256
+      - 3
+      - 2
+  - - - -1
+      - 14
+    - 1
+    - Concat
+    - - 1
+  - - -1
+    - 3
+    - C3
+    - - 384
+      - false
+  - - -1
+    - 1
+    - Conv
+    - - 384
+      - 3
+      - 2
+  - - - -1
+      - 10
+    - 1
+    - Concat
+    - - 1
+  - - -1
+    - 3
+    - C3
+    - - 768
+      - false
+  - - - 17
+      - 20
+      - 23
+    - 1
+    - Detect
+    - - nc
+      - anchors
+  ch: 3
+canonical_initialization: raw_checkpoints/target_manual_b6_reference_raw.pt
+selection_role: target-domain manually designed B6 reference
+immutable: true

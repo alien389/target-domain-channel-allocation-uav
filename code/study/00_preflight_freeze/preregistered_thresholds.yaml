@@ -1,0 +1,6 @@
+recall_noninferiority_margin: -0.002
+basic_ap_gain: 0.002
+strong_ap_gain: 0.003
+small_object_aps_gain: 0.003
+metric_scale: absolute_0_to_1
+frozen_before_official_val: true

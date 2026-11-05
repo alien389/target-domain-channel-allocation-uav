@@ -1,0 +1,223 @@
+protocol_id: VISDRONE_B6_META_PRUNING_Q1_V1_A1
+base_protocol:
+  path: ${STUDY_ROOT}\00_preflight_freeze\frozen_hyperparameters.yaml
+  sha256: CFBD863CC908769EE688C6B19BE8E95F02F0B1E33925EE9C3969F704704ABA6D
+  preserved: true
+overlay_rule: Amendment A1 overrides only keys explicitly declared below.
+dataset:
+  name: VisDrone2019-DET
+  nc: 10
+  class_order:
+  - pedestrian
+  - people
+  - bicycle
+  - car
+  - van
+  - truck
+  - tricycle
+  - awning-tricycle
+  - bus
+  - motor
+  meta_train_count: 5177
+  meta_inner_val_count: 1294
+  full_train_count: 6471
+  official_val_count: 548
+  split_seed: 42
+  internal_yaml: ${STUDY_ROOT}\01_data_split\data_yamls\visdrone_meta_train5177_inner1294.yaml
+  meta_train_list_sha256: A890318CB684513A4A4F27FC5E0FEDA7207A54CC554D556940907B2FBD1EA936
+  meta_inner_val_list_sha256: 1814CF80594A014FAB3AD8D6F80D956441FD06EAA43DDDA8970D148F82827278
+  official_val_locked_list_sha256: 8A30707BCC6FB6E119C929BAD1A4D531299E497A9762666AD70A9C6A31B2DE4A
+  official_val_first_evaluation_stage: Stage11
+budget:
+  name: Budget-6
+  reference_params: 2515679
+  reference_flops_g: 7.8540032
+  lower_fraction: 0.97
+  upper_fraction: 1.0
+training_common:
+  imgsz: 640
+  batch_size: 16
+  optimizer: SGD
+  optimizer_nesterov: true
+  lr0: 0.01
+  lrf: 0.01
+  scheduler: linear
+  momentum: 0.937
+  weight_decay: 0.0005
+  warmup_epochs: 3.0
+  warmup_momentum: 0.8
+  warmup_bias_lr: 0.1
+  amp: true
+  ema: true
+  autoanchor: true
+  multi_scale: false
+  tta: false
+  hyp_and_augmentations: inherited unchanged from base frozen hyperparameters
+search_parent:
+  enabled: true
+  initialization:
+    path: ${SOURCE_REFERENCE_ROOT}\checkpoints\lite_v3_full.pt
+    sha256: 01F7185F50FF96E61277916856A56EA4CF0EE22755D5E9812E6C4A1DAF15FDBD
+  architecture:
+    path: ${YOLOV5_ROOT}\models\yolov5s_lite_v3.yaml
+    sha256: 724080FB67EED6D413BA39CCA5084E3B84ADE4296BAAE3FB97A98A24E70D5CAB
+  train: meta-train5177
+  validation: meta-inner-val1294
+  epochs: 300
+  seed: 42
+  best_pt_selection: inner-val YOLOv5 fitness
+  explicit_inner_val_evaluation: true
+search_teacher:
+  enabled: false
+  status: SUPERSEDED_BY_AMENDMENT_A1
+  internal_teacher_superiority_gate: false
+  internal_teacher_confidence_threshold: null
+internal_kd:
+  enabled: false
+  status: SUPERSEDED_BY_AMENDMENT_A1
+internal_fidelities:
+  fidelity1:
+    source: fresh raw pruned checkpoint
+    recovery_epochs: 8
+    kd: false
+  fidelity2:
+    source: fresh raw pruned checkpoint
+    recovery_epochs: 25
+    kd: false
+  fidelity3:
+    source: fresh raw pruned checkpoint
+    recovery_epochs: 50
+    kd: false
+    training_seed: 42
+    jobs:
+    - Meta-AP+APS candidate A
+    - Meta-AP+APS candidate B
+    - Random Search candidate A
+    - Random Search candidate B
+    - Meta-AP-only candidate
+    - TargetManual-B6-reference
+    - MatchedManual-B6
+search:
+  methods:
+  - NSGA-II AP+APS
+  - Evolutionary AP-only
+  - Warm-started constrained Random Search
+  population: 16
+  method_evaluation_slots_per_method_replicate: 80
+  method_evaluation_records_total: 720
+  physical_fidelity1_jobs_max_before_cache: 624
+  shared_p0_reuse: true
+  replicate_base_seeds:
+  - 1042
+  - 2042
+  - 3042
+  candidate_training_seed: 42
+  objectives_and_lock_metrics:
+  - AP
+  - APS
+  - Recall
+  - Params
+  - FLOPs
+architecture_lock:
+  lock:
+  - dependency-group retained widths
+  - architecture signature
+  - protected groups
+  - Params
+  - FLOPs
+  - budget feasibility
+  - selection provenance
+  search_genome_definition: retained channel count per dependency group
+  search_phase_weights_are_final: false
+  search_phase_channel_indices_are_final: false
+final_parent:
+  initialization:
+    path: ${SOURCE_REFERENCE_ROOT}\checkpoints\lite_v3_full.pt
+    sha256: 01F7185F50FF96E61277916856A56EA4CF0EE22755D5E9812E6C4A1DAF15FDBD
+  train: full VisDrone train6471
+  validation: disabled
+  epochs: 300
+  seed: 42
+  checkpoint: terminal EMA only
+  early_stopping: false
+  best_pt_selection: false
+  official_val_access: false
+final_taylor:
+  source_model: Lite-v3-FinalParent terminal EMA
+  source_pool: full VisDrone train6471
+  subset_size: 512
+  subset_seed: 42
+  subset_list_path: TO_BE_CREATED_AND_HASHED_BEFORE_STAGE09B_SCORING
+  formula: identical to frozen Stage03A
+  loss_definition: identical to frozen Stage03A
+  batch_size: identical to frozen Stage03A
+  dependency_groups: identical to frozen Stage03A
+  normalization: identical to frozen Stage03A
+  aggregation: identical to frozen Stage03A
+  allowed_output: channel indices within each already-locked retained width
+  may_change_retained_widths: false
+  may_change_architecture_winner: false
+  may_change_params_flops_target: false
+  may_rerun_search: false
+final_teacher:
+  initialization:
+    path: ${YOLOV5_ROOT}m.pt
+    sha256: 61D933360BA5A7733A36764996C800287D973889D875227F5BEEDD2473A97A56
+  train: full VisDrone train6471
+  validation: disabled
+  epochs: 300
+  seed: 42
+  checkpoint: terminal EMA only
+  early_stopping: false
+  best_pt_selection: false
+  official_val_access: false
+  existing_teacher_reuse_requires:
+  - full train6471
+  - official val548 never used
+  - terminal EMA checkpoint available
+  - no best.pt selected using official val
+  - nc=10 and exact class order
+  - same preprocessing and architecture
+final_kd:
+  scope: final training only
+  teacher: YOLOv5m-FinalTeacher terminal EMA
+  teacher_confidence_threshold: 0.45
+  recipe:
+  - raw reconstruction from FinalParent
+  - Recovery-50
+  - KD1-10
+  - KD2-15
+  - terminal KD2 EMA
+  kd1_definition: inherited unchanged from base frozen hyperparameters
+  kd2_definition: inherited unchanged from base frozen hyperparameters
+  identical_for_all_final_architectures: true
+final_runs:
+  Meta-AP+APS-B6:
+  - 42
+  - 43
+  - 44
+  MatchedManual-B6:
+  - 42
+  - 43
+  - 44
+  Meta-AP-only-B6:
+  - 42
+  - 43
+  - 44
+  RandomSearch-B6:
+  - 42
+  - 43
+  - 44
+  TargetManual-B6-reference:
+  - 42
+  total: 13
+excluded:
+- B1
+- B10
+- RTX
+- Raspberry Pi
+- INT8
+deployment: Jetson Xavier NX TensorRT FP16 only
+approval:
+  required_next_token: APPROVE_AMENDMENT_A1_START_STAGE02
+  stage02_completion_token: APPROVE_STAGE02_SEARCH_PARENT

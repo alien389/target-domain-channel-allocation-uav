@@ -1,0 +1,23 @@
+{
+  "run_index": 12,
+  "run_id": "RUN12-RANDOM_SEARCH_B6-SEED44",
+  "model": "RandomSearch-B6",
+  "model_role": "warm-start constrained Random Search control",
+  "candidate_id": "F2PHYS-67362A640747F04D",
+  "architecture_signature": "67362A640747F04DF16762E085A7DACB2F5D4A0247425C6A5DBCD36FB545BFF0",
+  "seed": 44,
+  "output_directory": "${STUDY_ROOT}\\10_final_fulltrain_300e_matched\\random_search_b6\\seed44",
+  "initialization": "${STUDY_ROOT}\\09_locked_architectures\\raw_checkpoints\\random_search_b6_raw.pt",
+  "initialization_sha256": "C4B41C1562E65C212E564335FE954FCB7889215F2441F893FFCF60B9A3A310A9",
+  "yaml": "${STUDY_ROOT}\\09_locked_architectures\\yamls\\random_search_b6.yaml",
+  "yaml_sha256": "756EB5B1C03EA666ECD9F1062CF9DB7E58730DCDB1721289219F41241842DB2D",
+  "genome_sha256": "AC677F20AA521EF943EC1AEACBBE2E9326481C0B188EB8FEAC14CF2D5D4AF4EB",
+  "channel_index_map_sha256": "0E0E9F62FFE34BA77E742ED0768A9DCC95294B2E5181BCEE8CD7E54A5736DD51",
+  "params_fused_exact": 2503879,
+  "flops_raw_exact": 7825996800,
+  "train_only_yaml": "${STUDY_ROOT}\\10_final_fulltrain_300e_matched\\configs\\visdrone_full_train6471_train_only.yaml",
+  "dataset_manifest_sha256": "7694F9A913E00223E3D12492DC6EDF600C4547E4E74C7AF1902428158DA4D021",
+  "common_hyp": "${STUDY_ROOT}\\10_final_fulltrain_300e_matched\\configs\\stage10_common_300e_hyp.yaml",
+  "common_hyp_sha256": "C1FB3A39E47771E5BBB54ADDE0B0F370303CEB8DDF908B9D103710FB1A804BFB",
+  "training_source": "${STUDY_ROOT}\\10_final_fulltrain_300e_matched\\scripts\\train_drone_fixed_horizon_no_val.py"
+}

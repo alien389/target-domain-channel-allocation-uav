@@ -1,0 +1,41 @@
+stage: Stage03A corrected historical protocol
+model_id: litev3_searchparent_nc10_stage03a_unfused
+weights: ${STUDY_ROOT}\02_search_parent_teacher\lite_v3_search_parent\weights\best.pt
+weights_sha256: 15E0E4C80677F9E01163D66CE9844C6ED96FF9E922D4FDA5530A3425A3009659
+profile_dir: ${STUDY_ROOT}\03a_taylor_dependency_gene_space\structural_profile\litev3_searchparent_nc10_stage03a_unfused
+data_yaml: ${STUDY_ROOT}\03a_taylor_dependency_gene_space\taylor_historical_protocol_data.yaml
+eligible_pool: ${STUDY_ROOT}\01_data_split\meta_train5177_seed42.txt
+unique_pool_images: 5177
+logical_observation_schedule: ${STUDY_ROOT}\03a_taylor_dependency_gene_space\taylor_observation_schedule16000_seed42.csv
+total_image_observations: 16000
+batch_size: 16
+total_batches: 1000
+chunk_offsets:
+- 0
+- 200
+- 400
+- 600
+- 800
+batches_per_chunk: 200
+seed: 42
+imgsz: 640
+workers: 4
+shuffle: false
+ordering: lexicographic path order
+pool_exhaustion_policy: cyclic continuation modulo 5177
+augment: false
+rect: false
+pad: 0.0
+cache_images: false
+amp: false
+model_mode: train
+batchnorm_policy: eval modules; running statistics frozen
+prefer_ema: true
+score_reduction: mean_abs
+formula: I_c = mean_(N,H,W)|A_c*dL/dA_c|; mean over 200 batches; mean over 5 chunks
+normalization: per-scope aggregated mean divided by per-scope maximum
+loss_hyp_yaml: ${YOLOV5_ROOT}\data\hyps\hyp.scratch-low.yaml
+optimizer_steps: 0
+weight_updates: 0
+ema_updates: 0
+official_val_used: false

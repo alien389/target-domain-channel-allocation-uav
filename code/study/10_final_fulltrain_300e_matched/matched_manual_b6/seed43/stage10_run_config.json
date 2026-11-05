@@ -1,0 +1,23 @@
+{
+  "run_index": 9,
+  "run_id": "RUN09-MATCHED_MANUAL_B6-SEED43",
+  "model": "MatchedManual-B6",
+  "model_role": "near-matched dependency-aware Global Taylor manual control",
+  "candidate_id": "F3CTRL-MATCHEDMANUAL-DED07E02EAE3B021",
+  "architecture_signature": "DED07E02EAE3B021E4CE8B8A078348F24975BB5593CE264565E5A6BE23776C69",
+  "seed": 43,
+  "output_directory": "${STUDY_ROOT}\\10_final_fulltrain_300e_matched\\matched_manual_b6\\seed43",
+  "initialization": "${STUDY_ROOT}\\09_locked_architectures\\raw_checkpoints\\matched_manual_b6_raw.pt",
+  "initialization_sha256": "3C1BD9823EC289875A152326E8AFF44BDAEB42DD5C74CDDB59E797FCB3A9C6FC",
+  "yaml": "${STUDY_ROOT}\\09_locked_architectures\\yamls\\matched_manual_b6.yaml",
+  "yaml_sha256": "6DB884A484AE116B04488B2378851BAB3ECC7773E9F82451154587B62D11C43E",
+  "genome_sha256": "149A2307A04EBDD52DEDEE152920EFF6B0DDBAB10C6DF5A29D9081FA257DCC30",
+  "channel_index_map_sha256": "FF5E3AE06FA0C1B62DDF931D00A2B9657351997ED27A5886A40E6DAE1BC71836",
+  "params_fused_exact": 2512591,
+  "flops_raw_exact": 7775097600,
+  "train_only_yaml": "${STUDY_ROOT}\\10_final_fulltrain_300e_matched\\configs\\visdrone_full_train6471_train_only.yaml",
+  "dataset_manifest_sha256": "7694F9A913E00223E3D12492DC6EDF600C4547E4E74C7AF1902428158DA4D021",
+  "common_hyp": "${STUDY_ROOT}\\10_final_fulltrain_300e_matched\\configs\\stage10_common_300e_hyp.yaml",
+  "common_hyp_sha256": "C1FB3A39E47771E5BBB54ADDE0B0F370303CEB8DDF908B9D103710FB1A804BFB",
+  "training_source": "${STUDY_ROOT}\\10_final_fulltrain_300e_matched\\scripts\\train_drone_fixed_horizon_no_val.py"
+}

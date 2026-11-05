@@ -1,0 +1,23 @@
+{
+  "run_index": 10,
+  "run_id": "RUN10-META_AP_ONLY_B6-SEED43",
+  "model": "Meta-AP-only-B6",
+  "model_role": "single-objective evolutionary AP-only control",
+  "candidate_id": "F2PHYS-A14F4B16087416B0",
+  "architecture_signature": "A14F4B16087416B074FFDAE2BFAB8960BF9D3B4A40A4AC4559C6D59E9887D872",
+  "seed": 43,
+  "output_directory": "${STUDY_ROOT}\\10_final_fulltrain_300e_matched\\meta_ap_only_b6\\seed43",
+  "initialization": "${STUDY_ROOT}\\09_locked_architectures\\raw_checkpoints\\meta_ap_only_b6_raw.pt",
+  "initialization_sha256": "194BEA4EFA4F4E0CDD713F05B262DDA82750CBB3F92E50BAEEA8E80794E1623F",
+  "yaml": "${STUDY_ROOT}\\09_locked_architectures\\yamls\\meta_ap_only_b6.yaml",
+  "yaml_sha256": "5409FD34BF9284442AC72422B311179EF6F42D2543BE83AE0148BD2B34324051",
+  "genome_sha256": "028BCC4985F764DED174BA077D018DCE3EA0CEF31FB0AF3F6F9B2983B42451EF",
+  "channel_index_map_sha256": "18A82B4799350B74A3B2DD93ED2E8C64ADEBF23C1CBB71A48C3F152E8DDC7932",
+  "params_fused_exact": 2487047,
+  "flops_raw_exact": 7812531200,
+  "train_only_yaml": "${STUDY_ROOT}\\10_final_fulltrain_300e_matched\\configs\\visdrone_full_train6471_train_only.yaml",
+  "dataset_manifest_sha256": "7694F9A913E00223E3D12492DC6EDF600C4547E4E74C7AF1902428158DA4D021",
+  "common_hyp": "${STUDY_ROOT}\\10_final_fulltrain_300e_matched\\configs\\stage10_common_300e_hyp.yaml",
+  "common_hyp_sha256": "C1FB3A39E47771E5BBB54ADDE0B0F370303CEB8DDF908B9D103710FB1A804BFB",
+  "training_source": "${STUDY_ROOT}\\10_final_fulltrain_300e_matched\\scripts\\train_drone_fixed_horizon_no_val.py"
+}

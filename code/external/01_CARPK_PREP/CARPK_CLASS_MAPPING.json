@@ -1,0 +1,18 @@
+{
+  "schema": "stage15_carpk_class_mapping_v1",
+  "created_utc": "2026-08-20T06:16:02.803194+00:00",
+  "source_dataset": "VisDrone2019-DET",
+  "source_class_name": "car",
+  "source_class_id_zero_based": 3,
+  "target_dataset": "CARPK",
+  "target_class_name": "car",
+  "target_annotation_class_id": 1,
+  "target_annotation_semantics": "The fifth bundled annotation field equals 1 for every verified test object.",
+  "other_source_classes_mapped": false,
+  "evidence_source": [
+    "${EXTERNAL_GENERALIZATION_ROOT}\\00_PRECHECK\\VISDRONE_CANONICAL_INFERENCE_CONFIG.json",
+    "${CODE_ROOT}\\metaheuristic\\CARPK\\tool\\draw_bounding_boxes.py",
+    "${EXTERNAL_GENERALIZATION_ROOT}\\01_CARPK_PREP\\CARPK_GT_AUDIT.csv"
+  ],
+  "status": "PASS"
+}

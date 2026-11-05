@@ -1,0 +1,23 @@
+{
+  "run_index": 7,
+  "run_id": "RUN07-META_AP_APS_B6-SEED43",
+  "model": "Meta-AP+APS-B6",
+  "model_role": "proposed target-domain NSGA-II AP+APS architecture",
+  "candidate_id": "F2PHYS-EEA3FB45FD3FD1BA",
+  "architecture_signature": "EEA3FB45FD3FD1BADD263DE055266F4F6B5EE34EE818F4C1D7026B764E862C80",
+  "seed": 43,
+  "output_directory": "${STUDY_ROOT}\\10_final_fulltrain_300e_matched\\meta_ap_aps_b6\\seed43",
+  "initialization": "${STUDY_ROOT}\\09_locked_architectures\\raw_checkpoints\\meta_ap_aps_b6_raw.pt",
+  "initialization_sha256": "B6045F3275B17D10E07E59282498AE7FA9D2C1B6E907533863B58742A095ADB9",
+  "yaml": "${STUDY_ROOT}\\09_locked_architectures\\yamls\\meta_ap_aps_b6.yaml",
+  "yaml_sha256": "13319E277A15FE30D6BBE905C93915641FE56E2F1F8C82B6943DBAFA8129344B",
+  "genome_sha256": "E441BEC35DBBCD0F727A2D04475B0F56C332C6D6C578F70E59A0E18F7E2EB1C9",
+  "channel_index_map_sha256": "AE9DF7A691EFEF62898CD1A147C1413468BEC472E379A55CBCFE0BB31F5E1D5C",
+  "params_fused_exact": 2507047,
+  "flops_raw_exact": 7847110400,
+  "train_only_yaml": "${STUDY_ROOT}\\10_final_fulltrain_300e_matched\\configs\\visdrone_full_train6471_train_only.yaml",
+  "dataset_manifest_sha256": "7694F9A913E00223E3D12492DC6EDF600C4547E4E74C7AF1902428158DA4D021",
+  "common_hyp": "${STUDY_ROOT}\\10_final_fulltrain_300e_matched\\configs\\stage10_common_300e_hyp.yaml",
+  "common_hyp_sha256": "C1FB3A39E47771E5BBB54ADDE0B0F370303CEB8DDF908B9D103710FB1A804BFB",
+  "training_source": "${STUDY_ROOT}\\10_final_fulltrain_300e_matched\\scripts\\train_drone_fixed_horizon_no_val.py"
+}

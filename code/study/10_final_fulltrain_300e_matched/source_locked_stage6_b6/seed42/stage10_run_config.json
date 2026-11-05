@@ -1,0 +1,23 @@
+{
+  "run_index": 2,
+  "run_id": "RUN02-SOURCE_LOCKED_STAGE6_B6-SEED42",
+  "model": "SourceLocked-Stage6-B6",
+  "model_role": "direct prior-work B6 comparator",
+  "candidate_id": "SOURCELOCKED-STAGE6-B6",
+  "architecture_signature": "F5676FDCAD6D59837837216267E344A8B3097E289E314C2062319A8BFB9FFB60",
+  "seed": 42,
+  "output_directory": "${STUDY_ROOT}\\10_final_fulltrain_300e_matched\\source_locked_stage6_b6\\seed42",
+  "initialization": "${STUDY_ROOT}\\09b_stage6_comparator_lock\\stage6_canonical_initialization.pt",
+  "initialization_sha256": "BEC657D07EC36861EC8168A61A0060D499BC94C575897D714188172B56E3A0F7",
+  "yaml": "${STUDY_ROOT}\\09b_stage6_comparator_lock\\stage6_canonical.yaml",
+  "yaml_sha256": "EEE45D989B0DE409948030A6AE3ED8234FD43E78088B7857629BB5A6610DB2EC",
+  "genome_sha256": null,
+  "channel_index_map_sha256": null,
+  "params_fused_exact": 2515679,
+  "flops_raw_exact": 7854003200,
+  "train_only_yaml": "${STUDY_ROOT}\\10_final_fulltrain_300e_matched\\configs\\visdrone_full_train6471_train_only.yaml",
+  "dataset_manifest_sha256": "7694F9A913E00223E3D12492DC6EDF600C4547E4E74C7AF1902428158DA4D021",
+  "common_hyp": "${STUDY_ROOT}\\10_final_fulltrain_300e_matched\\configs\\stage10_common_300e_hyp.yaml",
+  "common_hyp_sha256": "C1FB3A39E47771E5BBB54ADDE0B0F370303CEB8DDF908B9D103710FB1A804BFB",
+  "training_source": "${STUDY_ROOT}\\10_final_fulltrain_300e_matched\\scripts\\train_drone_fixed_horizon_no_val.py"
+}

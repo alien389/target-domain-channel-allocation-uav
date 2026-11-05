@@ -1,0 +1,16 @@
+path: ${DATASETS_ROOT}/VisDrone2019-YOLO-format
+train: ${KD_ROOT}\INPUTS\train6471_ordered.txt
+nc: 10
+names:
+  0: pedestrian
+  1: people
+  2: bicycle
+  3: car
+  4: van
+  5: truck
+  6: tricycle
+  7: awning-tricycle
+  8: bus
+  9: motor
+validation: ABSENT_BY_PROTOCOL
+usage: Stage10 train-only; the custom loader ignores this metadata key

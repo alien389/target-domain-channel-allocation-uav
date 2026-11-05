@@ -1,0 +1,30 @@
+{
+  "schema": "stage15_uavdt_class_mapping_v1",
+  "created_utc": "2026-08-20T06:19:26.623908+00:00",
+  "source_dataset": "VisDrone2019-DET",
+  "target_dataset": "UAVDT",
+  "mappings": [
+    {
+      "source_name": "car",
+      "source_id_zero_based": 3,
+      "target_name": "car",
+      "target_id": 1
+    },
+    {
+      "source_name": "truck",
+      "source_id_zero_based": 5,
+      "target_name": "truck",
+      "target_id": 2
+    },
+    {
+      "source_name": "bus",
+      "source_id_zero_based": 8,
+      "target_name": "bus",
+      "target_id": 3
+    }
+  ],
+  "source_ids_verified_from": "${EXTERNAL_GENERALIZATION_ROOT}\\00_PRECHECK\\VISDRONE_CANONICAL_INFERENCE_CONFIG.json",
+  "target_ids_verified_from": "${EXTERNAL_GENERALIZATION_ROOT}\\02_UAVDT_PREP\\derived\\official_evidence\\README.md",
+  "semantic_merges": false,
+  "status": "PASS"
+}
