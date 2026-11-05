@@ -1,0 +1,201 @@
+role: METADATA_ONLY_NOT_A_RECONSTRUCTION_RECIPE
+initializer: ${BASELINES_ROOT}\B3_S04_JOINT_P345_STRUCTURAL_FEASIBILITY_20261102\snapshot_1ec4869c\models\SELECTED_JOINT_P345_UNTRAINED.pt
+initializer_sha256: 586AA92460AFBCC69BD53C0FF6721EAAE2FB249B691FFBD8102809DA28E4F35B
+constructor: Exact original Stage10 deepcopy of serialized model
+physical_widths:
+  DG-001: 32
+  DG-002: 64
+  DG-003: 32
+  DG-004: 64
+  DG-005: 32
+  DG-006: 48
+  DG-007: 64
+  DG-008: 128
+  DG-009: 64
+  DG-010: 112
+  DG-011: 32
+  DG-012: 256
+  DG-013: 120
+  DG-014: 296
+  DG-015: 144
+  DG-016: 384
+  DG-017: 192
+  DG-018: 176
+  DG-019: 288
+  DG-020: 152
+  DG-021: 96
+  DG-022: 192
+  DG-023: 96
+  DG-024: 128
+  DG-025: 64
+  DG-026: 80
+  DG-027: 64
+  DG-028: 80
+  DG-029: 80
+  DG-030: 128
+  DG-031: 80
+  DG-032: 120
+  DG-033: 136
+  DG-034: 224
+  DG-035: 136
+embedded_checkpoint_yaml:
+  nc: 10
+  depth_multiple: 0.33
+  width_multiple: 0.5
+  anchors:
+  - - 10
+    - 13
+    - 16
+    - 30
+    - 33
+    - 23
+  - - 30
+    - 61
+    - 62
+    - 45
+    - 59
+    - 119
+  - - 116
+    - 90
+    - 156
+    - 198
+    - 373
+    - 326
+  backbone:
+  - - -1
+    - 1
+    - Conv
+    - - 64
+      - 6
+      - 2
+      - 2
+  - - -1
+    - 1
+    - Conv
+    - - 128
+      - 3
+      - 2
+  - - -1
+    - 3
+    - C3
+    - - 128
+  - - -1
+    - 1
+    - Conv
+    - - 256
+      - 3
+      - 2
+  - - -1
+    - 6
+    - C3Lite
+    - - 256
+  - - -1
+    - 1
+    - Conv
+    - - 512
+      - 3
+      - 2
+  - - -1
+    - 9
+    - C3Lite
+    - - 512
+  - - -1
+    - 1
+    - Conv
+    - - 768
+      - 3
+      - 2
+  - - -1
+    - 3
+    - C3Lite
+    - - 768
+  - - -1
+    - 1
+    - SPPF
+    - - 768
+      - 5
+  head:
+  - - -1
+    - 1
+    - Conv
+    - - 384
+      - 1
+      - 1
+  - - -1
+    - 1
+    - nn.Upsample
+    - - None
+      - 2
+      - nearest
+  - - - -1
+      - 6
+    - 1
+    - Concat
+    - - 1
+  - - -1
+    - 3
+    - C3
+    - - 384
+      - false
+  - - -1
+    - 1
+    - Conv
+    - - 256
+      - 1
+      - 1
+  - - -1
+    - 1
+    - nn.Upsample
+    - - None
+      - 2
+      - nearest
+  - - - -1
+      - 4
+    - 1
+    - Concat
+    - - 1
+  - - -1
+    - 3
+    - C3
+    - - 256
+      - false
+  - - -1
+    - 1
+    - Conv
+    - - 256
+      - 3
+      - 2
+  - - - -1
+      - 14
+    - 1
+    - Concat
+    - - 1
+  - - -1
+    - 3
+    - C3
+    - - 384
+      - false
+  - - -1
+    - 1
+    - Conv
+    - - 384
+      - 3
+      - 2
+  - - - -1
+      - 10
+    - 1
+    - Concat
+    - - 1
+  - - -1
+    - 3
+    - C3
+    - - 768
+      - false
+  - - - 17
+      - 20
+      - 23
+    - 1
+    - Detect
+    - - nc
+      - anchors
+  ch: 3

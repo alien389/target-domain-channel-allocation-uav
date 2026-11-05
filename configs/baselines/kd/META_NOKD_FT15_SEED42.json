@@ -1,0 +1,14 @@
+{
+  "run_id": "META_NOKD_FT15_SEED42",
+  "seed": 42,
+  "arm": "NOKD",
+  "kd_enabled": false,
+  "initialization": "${STUDY_ROOT}\\10_final_fulltrain_300e_matched\\meta_ap_aps_b6\\seed42\\weights\\terminal_ema.pt",
+  "initialization_SHA256": "D54AF86F3D7A6A277AF520F2072E12D7571CF984EF8FC90EC6FAEA5EEAE8EA24",
+  "output_directory": "${KD_ROOT}\\RUNS\\META_NOKD_FT15_SEED42",
+  "teacher": null,
+  "epochs": 15,
+  "cumulative_exposure": 315,
+  "hyp": "${KD_ROOT}\\INPUTS\\ft15_hyp.yaml",
+  "data": "${KD_ROOT}\\INPUTS\\train_only.yaml"
+}

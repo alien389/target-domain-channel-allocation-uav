@@ -1,0 +1,23 @@
+{
+  "run_index": 1,
+  "run_id": "M03_BN_GAMMA_B6_STAGE10_SEED42",
+  "model": "BN-Gamma-B6",
+  "model_role": "Source-frozen BN gamma with shared full-R1 joint-resource scheduler; no sparse pretraining",
+  "candidate_id": "BN-Gamma-B6-FROZEN-82",
+  "architecture_signature": "AFE20F51139A5FF88FBF040CB2D36B06DEB332246B74C8EB0D2CEE62DC62EB91",
+  "seed": 42,
+  "output_directory": "${BN_TRAINING_ROOT}\\01_SEED42_STAGE10",
+  "initialization": "${BN_ROOT}\\bn_gamma_b6_untrained_raw.pt",
+  "initialization_sha256": "7A2C263DB5900AE474F6353D1643801B7E0685C6E80E295531D2FE93E89AC859",
+  "yaml": "${BN_GAMMA_ARCHITECTURE_CONFIG}",
+  "yaml_sha256": "B0D83B10B23D39AD9323C9D0B009EE85C913E933B63FE3D46078E1E4F9FE01B0",
+  "genome_sha256": "15067E1D35EC011376C29CA74690710E0A8193636A8D66A41C4AEFF3BA21CCFC",
+  "channel_index_map_sha256": "0CBE2364A1136AE4BD3206FB4DF0247EAA3DCEFE590BE596BDC28E25C62C424E",
+  "params_fused_exact": 2486375,
+  "flops_raw_exact": 7819187200,
+  "train_only_yaml": "${STUDY_ROOT}\\10_final_fulltrain_300e_matched\\configs\\visdrone_full_train6471_train_only.yaml",
+  "dataset_manifest_sha256": "7694F9A913E00223E3D12492DC6EDF600C4547E4E74C7AF1902428158DA4D021",
+  "common_hyp": "${STUDY_ROOT}\\10_final_fulltrain_300e_matched\\configs\\stage10_common_300e_hyp.yaml",
+  "common_hyp_sha256": "C1FB3A39E47771E5BBB54ADDE0B0F370303CEB8DDF908B9D103710FB1A804BFB",
+  "training_source": "${STUDY_ROOT}\\10_final_fulltrain_300e_matched\\scripts\\train_drone_fixed_horizon_no_val.py"
+}

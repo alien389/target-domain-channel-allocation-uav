@@ -1,0 +1,23 @@
+{
+  "run_index": 1,
+  "run_id": "B3_S04_JOINT_D_STAGE10_SEED42",
+  "model": "B3_V6_JOINT_P345_D_COMPOUND_REALLOCATION",
+  "model_role": "Compound full13/13 path plus4 backbone reallocation",
+  "candidate_id": "D-D01D19CD07B2C337",
+  "architecture_signature": "D01D19CD07B2C33775AA45A50C5FD2957A277DE702A6E7224C5CE4D9D6666B65",
+  "seed": 42,
+  "output_directory": "${TRANSPLANT_ROOT}\\01_SEED42_STAGE10",
+  "initialization": "${BASELINES_ROOT}\\B3_S04_JOINT_P345_STRUCTURAL_FEASIBILITY_20261102\\snapshot_1ec4869c\\models\\SELECTED_JOINT_P345_UNTRAINED.pt",
+  "initialization_sha256": "586AA92460AFBCC69BD53C0FF6721EAAE2FB249B691FFBD8102809DA28E4F35B",
+  "yaml": "${TRANSPLANT_ARCHITECTURE_CONFIG}",
+  "yaml_sha256": "5D19E843DD65FABE00BF8F235CAD912527F4551E7E45A2C9A596E7A74D02B7B1",
+  "genome_sha256": "016C0254925156DE22CB0D1335A648FB88767D9E855B3BA438D062CEE110FFDE",
+  "channel_index_map_sha256": "555DF7F0DD799005C94EC4227E057EAF02D9DB2F40F140EE61AE335962748EDD",
+  "params_fused_exact": 2510231,
+  "flops_raw_exact": 7786406400,
+  "train_only_yaml": "${STUDY_ROOT}\\10_final_fulltrain_300e_matched\\configs\\visdrone_full_train6471_train_only.yaml",
+  "dataset_manifest_sha256": "7694F9A913E00223E3D12492DC6EDF600C4547E4E74C7AF1902428158DA4D021",
+  "common_hyp": "${STUDY_ROOT}\\10_final_fulltrain_300e_matched\\configs\\stage10_common_300e_hyp.yaml",
+  "common_hyp_sha256": "C1FB3A39E47771E5BBB54ADDE0B0F370303CEB8DDF908B9D103710FB1A804BFB",
+  "training_source": "${STUDY_ROOT}\\10_final_fulltrain_300e_matched\\scripts\\train_drone_fixed_horizon_no_val.py"
+}

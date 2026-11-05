@@ -1,0 +1,17 @@
+{
+  "provenance": "reconstructed_from_recorded_args and exact Stage11/Stage11B call sites; not a replacement evaluator",
+  "splits": [
+    "val548",
+    "testdev1610"
+  ],
+  "backend": "PyTorch FP32",
+  "imgsz": 640,
+  "batch_size": 16,
+  "rectangular": true,
+  "conf_thres": 0.001,
+  "iou_thres": 0.6,
+  "max_det": 500,
+  "augment": false,
+  "selection": "terminal EMA; evaluation does not select weights",
+  "ignore_policy": "exact included VisDrone evaluator port"
+}

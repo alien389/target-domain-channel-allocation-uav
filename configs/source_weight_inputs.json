@@ -1,0 +1,22 @@
+{
+  "Meta-AP+APS-B6": {
+    "initialization": "${STUDY_ROOT}\\09_locked_architectures\\raw_checkpoints\\meta_ap_aps_b6_raw.pt",
+    "initialization_sha256": "B6045F3275B17D10E07E59282498AE7FA9D2C1B6E907533863B58742A095ADB9"
+  },
+  "SourceLocked-Stage6-B6": {
+    "initialization": "${STUDY_ROOT}\\09b_stage6_comparator_lock\\stage6_canonical_initialization.pt",
+    "initialization_sha256": "BEC657D07EC36861EC8168A61A0060D499BC94C575897D714188172B56E3A0F7"
+  },
+  "MatchedManual-B6": {
+    "initialization": "${STUDY_ROOT}\\09_locked_architectures\\raw_checkpoints\\matched_manual_b6_raw.pt",
+    "initialization_sha256": "3C1BD9823EC289875A152326E8AFF44BDAEB42DD5C74CDDB59E797FCB3A9C6FC"
+  },
+  "Meta-AP-only-B6": {
+    "initialization": "${STUDY_ROOT}\\09_locked_architectures\\raw_checkpoints\\meta_ap_only_b6_raw.pt",
+    "initialization_sha256": "194BEA4EFA4F4E0CDD713F05B262DDA82750CBB3F92E50BAEEA8E80794E1623F"
+  },
+  "RandomSearch-B6": {
+    "initialization": "${STUDY_ROOT}\\09_locked_architectures\\raw_checkpoints\\random_search_b6_raw.pt",
+    "initialization_sha256": "C4B41C1562E65C212E564335FE954FCB7889215F2441F893FFCF60B9A3A310A9"
+  }
+}

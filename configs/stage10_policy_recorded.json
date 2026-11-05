@@ -1,0 +1,26 @@
+{
+  "provenance": "reconstructed_from_recorded_args: selected exact original Stage10 policy fields; not the complete historical lock",
+  "protocol": "A4_STAGE6_MATCHED_300E_FINAL_TRAINING",
+  "epochs": 300,
+  "imgsz": 640,
+  "batch_size": 16,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "optimizer": "SGD",
+  "workers": 4,
+  "amp": true,
+  "ema": true,
+  "autoanchor": true,
+  "multi_scale": false,
+  "validation_disabled": true,
+  "early_stopping": false,
+  "best_pt_selection": false,
+  "terminal_ema_only_for_accuracy": true,
+  "kd": false,
+  "teacher": false,
+  "max_concurrent_gpu_training_jobs": 1,
+  "cooldown_seconds": 600
+}

@@ -1,0 +1,14 @@
+{
+  "run_id": "META_KD2_FT15_SEED44",
+  "seed": 44,
+  "arm": "KD2",
+  "kd_enabled": true,
+  "initialization": "${STUDY_ROOT}\\10_final_fulltrain_300e_matched\\meta_ap_aps_b6\\seed44\\weights\\terminal_ema.pt",
+  "initialization_SHA256": "ED154DFA5E93A713A0C2ED98CE116BC874C10CB05C7F931362EE1571A1546A53",
+  "output_directory": "${KD_ROOT}\\RUNS\\META_KD2_FT15_SEED44",
+  "teacher": "${STUDY_ROOT}\\02_search_parent_teacher\\lite_v3_search_parent\\weights\\best.pt",
+  "epochs": 15,
+  "cumulative_exposure": 315,
+  "hyp": "${KD_ROOT}\\INPUTS\\ft15_hyp.yaml",
+  "data": "${KD_ROOT}\\INPUTS\\train_only.yaml"
+}
