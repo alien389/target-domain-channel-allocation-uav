@@ -1,3 +1,4 @@
+#Add experimental results and reproducibility artifacts
 # Jetson Xavier NX: TensorRT power, energy, and latency evidence
 
 ## Scope
