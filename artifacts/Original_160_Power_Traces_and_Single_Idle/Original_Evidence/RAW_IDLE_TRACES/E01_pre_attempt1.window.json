@@ -1,0 +1,14 @@
+{
+  "t0_ns": 9020328948715,
+  "t1_ns": 9320328948715,
+  "status": "COMPLETE",
+  "utc": "2026-11-09T23:40:38.689455+00:00",
+  "coverage": {
+    "ok": true,
+    "gap_max_ns": 175382059,
+    "missing_rail_lines": 0,
+    "left_ns": 9020321905911,
+    "right_ns": 9320411286815,
+    "in_window": 2612
+  }
+}

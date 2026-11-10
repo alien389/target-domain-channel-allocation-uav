@@ -1,0 +1,26 @@
+{
+  "argv": [
+    "sudo",
+    "-n",
+    "/usr/bin/tegrastats",
+    "--interval",
+    "100"
+  ],
+  "clock": "CLOCK_MONOTONIC via time.monotonic_ns; host pipe receipt",
+  "monotonic_info": "namespace(adjustable=False, implementation='clock_gettime(CLOCK_MONOTONIC)', monotonic=True, resolution=1e-09)",
+  "logger_launch_ns": 9019692503603,
+  "logger_launch_utc": "2026-11-09T23:35:37.610489+00:00",
+  "logger_pid": 12218,
+  "logger_ready_ns": 9020328925388,
+  "logger_stop_request_ns": 9320785889007,
+  "logger_stop_request_utc": "2026-11-09T23:40:38.703874+00:00",
+  "incomplete_pipe_tail_bytes": 0,
+  "logger_exit": -13,
+  "logger_exit_ns": 9320919096609,
+  "logger_exit_utc": "2026-11-09T23:40:38.837080+00:00",
+  "lines": 2621,
+  "valid": 2621,
+  "error": null,
+  "logger_thread_join_ns": 9320920924351,
+  "remaining_loggers": ""
+}
