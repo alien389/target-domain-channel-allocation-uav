@@ -1,5 +1,29 @@
 # Target-domain channel allocation for efficient UAV detection
 
+Published R1 release and archival references
+
+Manuscript: MJCSC-D-26-00121
+
+GitHub Repository: 
+https://github.com/alien389/target-domain-channel-allocation-uav
+
+Complete R1 Evidence Release (16 archives and SHA-256 integrity file): 
+https://github.com/alien389/target-domain-channel-allocation-uav/releases/tag/evidence-r1-v1.0.0
+
+Zenodo R1 Version DOI (current release): 
+https://doi.org/10.5281/zenodo.24347341
+
+Zenodo Concept DOI (all versions):
+https://doi.org/10.5281/zenodo.23977144
+
+Previous v1.0.0 Version DOI (historical release): 
+https://doi.org/10.5281/zenodo.23977145
+
+The complete R1 experimental evidence archives are hosted as GitHub Release Assets. Zenodo preserves the corresponding tagged software repository snapshot. The Zenodo record does not independently contain the complete experimental evidence archives.
+
+File names, sizes, and SHA-256 checksums are documented in the repository's reproducibility manifests and the release integrity file.
+
+
 Research evidence for MJCSC-D-26-00121R1. This is a local, pre-publication
 overlay for the existing source repository. The staged Release assets include
 15 terminal-EMA checkpoints, per-image predictions for 30 external runs,
