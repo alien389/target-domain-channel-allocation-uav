@@ -1,0 +1,32 @@
+{
+  "schema": "stage06a_fidelity2_promotion_lock_v1",
+  "created_utc": "2026-08-05T19:47:23.218852+00:00",
+  "approval_token_consumed": "APPROVE_STAGE05_FULL_FIDELITY1_SEARCH",
+  "stage": "STAGE06A_FIDELITY2_PROMOTION_LOCK",
+  "stage05_final_status": "PASS_WITH_NONBLOCKING_PACKAGING_GAPS",
+  "promotion_policy_sha256": "A4F8838DDDA22EFBC751C43FDDE3DF66A60E6C9F30AFFAB21FE938BE432378E8",
+  "promotion_policy_preexisted": true,
+  "post_hoc_selection_used": false,
+  "frozen_constraints": {
+    "recall_floor_full_precision_inclusive": "0.30035872606099606",
+    "params_exact_integer_inclusive": [
+      2440209,
+      2515679
+    ],
+    "flops_raw_exact_integer_inclusive": [
+      7618383104,
+      7854003200
+    ]
+  },
+  "promoted_method_records": 11,
+  "promoted_unique_physical_architectures": 10,
+  "fidelity2_execution_started": false,
+  "locks": {
+    "promotion_manifest_immutable_after_complete": true,
+    "stage05_read_only": true,
+    "official_val548_locked": true,
+    "heldout1610_locked": true,
+    "kd_disabled": true
+  },
+  "required_next_token": "APPROVE_STAGE06A_FIDELITY2_PROMOTION_LOCK"
+}

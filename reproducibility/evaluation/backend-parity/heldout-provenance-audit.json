@@ -1,0 +1,53 @@
+{
+  "schema": "heldout1610_provenance_audit_v1",
+  "created_utc": "2026-08-09T18:51:14.465820+00:00",
+  "status": "AUTHOR_ATTESTED_TEST_DEV_AND_LOCAL_REPLICA_CONCORDANCE",
+  "heldout_identity": {
+    "publication_name": "VisDrone2019-DET-test-dev (heldout1610)",
+    "image_count": 1610,
+    "unique_image_count": 1610,
+    "ordered_image_manifest_sha256": "C5A158CB66173054392EA9F848ABD23A76D092EB97FACD72C06A36C70310998B",
+    "annotation_manifest_sha256": "54EA8E1CB871C2CDD9059BA4104E1B59112733588A44F2EA71006ECAA0BD813E",
+    "yolo_label_manifest_sha256": "C43DF9867105133F9E309F34AF0B68D0A457910E874CA40386FA96B21DF04CAB",
+    "raw_source_root_label": "withheld-local-ref-c34657bdaa7dc7c8960a"
+  },
+  "evidence_examined": [
+    {
+      "path": "withheld-local-ref-dd09bbecd4ef18db6525",
+      "size_bytes": 1373691,
+      "sha256": "30E2E22494B0CC55EF47E1905283D4B54AC45572C6B1A5191CF85CF7766CA167"
+    },
+    {
+      "path": "withheld-local-ref-3ca51fba0264944e31b1",
+      "size_bytes": 1383,
+      "sha256": "3AEAE98340003319B0F1D3011325612CEC9CCBA14C892743422421F6EEF884DA"
+    }
+  ],
+  "internet_used": false,
+  "scientific_failure": false,
+  "global_heldout_virginity": false,
+  "historical_disclosure": {
+    "known_before_second_paper_search": true,
+    "package_path": "withheld-local-ref-47fefe4a61ee7ce119ec",
+    "validation_file": "withheld-local-ref-b7b68fbe7c993ed17c54",
+    "validation_file_sha256": "58481A4A47DB08DE53DB01730B1D28AB15EE08963C5EFBB4EE31B0E09D5E0F8A",
+    "scope": "Fixed source-selected model bank from prior work; not second-paper candidates and prohibited from all second-paper decisions.",
+    "permitted_use": "Contextual historical disclosure only",
+    "prohibited_uses": [
+      "search",
+      "candidate training",
+      "candidate promotion",
+      "architecture locking",
+      "threshold selection",
+      "final winner selection"
+    ]
+  },
+  "model_inference_executed": false,
+  "predictions_generated": false,
+  "scope_update": {
+    "author_attests_original_acquisition_and_experiment_use": true,
+    "concordant_local_images": 1610,
+    "concordant_local_annotations": 1610,
+    "independent_external_archive_comparison_performed": false
+  }
+}

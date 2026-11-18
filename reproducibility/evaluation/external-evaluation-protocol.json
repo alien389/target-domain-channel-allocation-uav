@@ -1,0 +1,304 @@
+{
+  "schema": "stage15_external_zero_shot_protocol_lock_v1",
+  "created_utc": "2026-08-20T06:24:22.607798+00:00",
+  "status": "LOCKED_PRE_INFERENCE",
+  "git": {
+    "yolov5_commit": "88af13e3e25602344aab68d44f9d0b666dacf695",
+    "yolov5_working_tree_porcelain": "M data/coco.yaml\n M export.py\n M models/common.py\n M models/yolo.py\n?? data/VisDrone_A_val_only.yaml\n?? data/coco_eval.yaml\n?? data/hyps/hyp.visdrone_refine_nomosaic.yaml\n?? models/yolov5s_lite_v1.yaml\n?? models/yolov5s_lite_v2.yaml\n?? models/yolov5s_lite_v2_1.yaml\n?? models/yolov5s_lite_v3.yaml\n?? models/yolov5s_lite_v4_safe_neck.yaml\n?? models/yolov5s_lite_v5_safe_block.yaml\n?? train_drone.py"
+  },
+  "scientific_role": "External zero-shot generalization accuracy evaluation",
+  "primary_development_dataset": "VisDrone2019-DET",
+  "checkpoints": [
+    {
+      "architecture": "Meta-AP+APS-B6",
+      "seed": 42,
+      "checkpoint_path": "withheld-local-ref-edfa62133de203efae23",
+      "sha256": "D54AF86F3D7A6A277AF520F2072E12D7571CF984EF8FC90EC6FAEA5EEAE8EA24",
+      "file_size_bytes": 5401375,
+      "epoch": 300,
+      "ema_status": "TERMINAL_EMA_VERIFIED",
+      "architecture_signature": "EEA3FB45FD3FD1BADD263DE055266F4F6B5EE34EE818F4C1D7026B764E862C80",
+      "params_exact": 2507047,
+      "flops_raw_exact": 7847110400
+    },
+    {
+      "architecture": "Meta-AP+APS-B6",
+      "seed": 43,
+      "checkpoint_path": "withheld-local-ref-f79309c6efc5add5f2d3",
+      "sha256": "E59BCA14BE3A5B343D99B540A58B1E7AE7E9BA8444F1E5907B16CB813B1349E9",
+      "file_size_bytes": 5401375,
+      "epoch": 300,
+      "ema_status": "TERMINAL_EMA_VERIFIED",
+      "architecture_signature": "EEA3FB45FD3FD1BADD263DE055266F4F6B5EE34EE818F4C1D7026B764E862C80",
+      "params_exact": 2507047,
+      "flops_raw_exact": 7847110400
+    },
+    {
+      "architecture": "Meta-AP+APS-B6",
+      "seed": 44,
+      "checkpoint_path": "withheld-local-ref-0fbb0c22bf2878bfa429",
+      "sha256": "ED154DFA5E93A713A0C2ED98CE116BC874C10CB05C7F931362EE1571A1546A53",
+      "file_size_bytes": 5401375,
+      "epoch": 300,
+      "ema_status": "TERMINAL_EMA_VERIFIED",
+      "architecture_signature": "EEA3FB45FD3FD1BADD263DE055266F4F6B5EE34EE818F4C1D7026B764E862C80",
+      "params_exact": 2507047,
+      "flops_raw_exact": 7847110400
+    },
+    {
+      "architecture": "Meta-AP-only-B6",
+      "seed": 42,
+      "checkpoint_path": "withheld-local-ref-9e0ccda55c3327a32556",
+      "sha256": "9FFAE3B5F848A7D6C8DEC1246718E4E22E6DB82560E318213732D886A6E82FB0",
+      "file_size_bytes": 5360863,
+      "epoch": 300,
+      "ema_status": "TERMINAL_EMA_VERIFIED",
+      "architecture_signature": "A14F4B16087416B074FFDAE2BFAB8960BF9D3B4A40A4AC4559C6D59E9887D872",
+      "params_exact": 2487047,
+      "flops_raw_exact": 7812531200
+    },
+    {
+      "architecture": "Meta-AP-only-B6",
+      "seed": 43,
+      "checkpoint_path": "withheld-local-ref-c33cf7c97d9a59eeafcf",
+      "sha256": "9145668C8B90D0B5294222C90113A99ECE8F310B91E2209B6A8D239763711164",
+      "file_size_bytes": 5360863,
+      "epoch": 300,
+      "ema_status": "TERMINAL_EMA_VERIFIED",
+      "architecture_signature": "A14F4B16087416B074FFDAE2BFAB8960BF9D3B4A40A4AC4559C6D59E9887D872",
+      "params_exact": 2487047,
+      "flops_raw_exact": 7812531200
+    },
+    {
+      "architecture": "Meta-AP-only-B6",
+      "seed": 44,
+      "checkpoint_path": "withheld-local-ref-d40aa88f00d97a5eb25b",
+      "sha256": "EDE9859BE7148C7C6A7AD0900CE4EFEE213747789582F9DAB56C8E530D2940D6",
+      "file_size_bytes": 5360863,
+      "epoch": 300,
+      "ema_status": "TERMINAL_EMA_VERIFIED",
+      "architecture_signature": "A14F4B16087416B074FFDAE2BFAB8960BF9D3B4A40A4AC4559C6D59E9887D872",
+      "params_exact": 2487047,
+      "flops_raw_exact": 7812531200
+    },
+    {
+      "architecture": "RandomSearch-B6",
+      "seed": 42,
+      "checkpoint_path": "withheld-local-ref-4f7db64c120845f908c0",
+      "sha256": "4161D77F16A1B3D4CA7460DC6DB76F883F81D09FA1429E21A654BE90C7F6905B",
+      "file_size_bytes": 5394527,
+      "epoch": 300,
+      "ema_status": "TERMINAL_EMA_VERIFIED",
+      "architecture_signature": "67362A640747F04DF16762E085A7DACB2F5D4A0247425C6A5DBCD36FB545BFF0",
+      "params_exact": 2503879,
+      "flops_raw_exact": 7825996800
+    },
+    {
+      "architecture": "RandomSearch-B6",
+      "seed": 43,
+      "checkpoint_path": "withheld-local-ref-5f884f404359bdcaa6b7",
+      "sha256": "25A407136BBF3A9899A67697DE393D57AD69334080EB73FAE94A5706C93B9978",
+      "file_size_bytes": 5394527,
+      "epoch": 300,
+      "ema_status": "TERMINAL_EMA_VERIFIED",
+      "architecture_signature": "67362A640747F04DF16762E085A7DACB2F5D4A0247425C6A5DBCD36FB545BFF0",
+      "params_exact": 2503879,
+      "flops_raw_exact": 7825996800
+    },
+    {
+      "architecture": "RandomSearch-B6",
+      "seed": 44,
+      "checkpoint_path": "withheld-local-ref-16b9f25221e8cdbd6ab9",
+      "sha256": "CAD9F7DBAB33ACCB7566C5B89C117FDC1585B57E1BDA992CE70E974ED089BCAD",
+      "file_size_bytes": 5394527,
+      "epoch": 300,
+      "ema_status": "TERMINAL_EMA_VERIFIED",
+      "architecture_signature": "67362A640747F04DF16762E085A7DACB2F5D4A0247425C6A5DBCD36FB545BFF0",
+      "params_exact": 2503879,
+      "flops_raw_exact": 7825996800
+    },
+    {
+      "architecture": "MatchedManual-B6",
+      "seed": 42,
+      "checkpoint_path": "withheld-local-ref-6d7f5b3313e364e0f9b0",
+      "sha256": "08C9ABBBC72879CF3C74DB16E81C62B59AA40DCF181F13650C1448AD278EE1F4",
+      "file_size_bytes": 5407967,
+      "epoch": 300,
+      "ema_status": "TERMINAL_EMA_VERIFIED",
+      "architecture_signature": "DED07E02EAE3B021E4CE8B8A078348F24975BB5593CE264565E5A6BE23776C69",
+      "params_exact": 2512591,
+      "flops_raw_exact": 7775097600
+    },
+    {
+      "architecture": "MatchedManual-B6",
+      "seed": 43,
+      "checkpoint_path": "withheld-local-ref-5a4a34a87b74d22a101c",
+      "sha256": "5FC5EC710D68AA99C45A29692A62C0C097BCA3E775587F4BEF589DA95530039D",
+      "file_size_bytes": 5407967,
+      "epoch": 300,
+      "ema_status": "TERMINAL_EMA_VERIFIED",
+      "architecture_signature": "DED07E02EAE3B021E4CE8B8A078348F24975BB5593CE264565E5A6BE23776C69",
+      "params_exact": 2512591,
+      "flops_raw_exact": 7775097600
+    },
+    {
+      "architecture": "MatchedManual-B6",
+      "seed": 44,
+      "checkpoint_path": "withheld-local-ref-3fe9572106f6aa86de42",
+      "sha256": "AFEF606686F905EDE70C6CFD2BCE3F06B620290A73C034AF2F127875776BF4BE",
+      "file_size_bytes": 5407967,
+      "epoch": 300,
+      "ema_status": "TERMINAL_EMA_VERIFIED",
+      "architecture_signature": "DED07E02EAE3B021E4CE8B8A078348F24975BB5593CE264565E5A6BE23776C69",
+      "params_exact": 2512591,
+      "flops_raw_exact": 7775097600
+    },
+    {
+      "architecture": "SourceLocked-Stage6-B6",
+      "seed": 42,
+      "checkpoint_path": "withheld-local-ref-8ae1d175501ab9538322",
+      "sha256": "0525146141B77BB8311E316B69F1AEC16E77E1A43A2B54E6B48DDCD19CE489F2",
+      "file_size_bytes": 5415775,
+      "epoch": 300,
+      "ema_status": "TERMINAL_EMA_VERIFIED",
+      "architecture_signature": "F5676FDCAD6D59837837216267E344A8B3097E289E314C2062319A8BFB9FFB60",
+      "params_exact": 2515679,
+      "flops_raw_exact": 7854003200
+    },
+    {
+      "architecture": "SourceLocked-Stage6-B6",
+      "seed": 43,
+      "checkpoint_path": "withheld-local-ref-f0c3cabd329c87056467",
+      "sha256": "75FEDB0F92EAF57C0A87D281DC95DBAC008F4FC04123EE1AFCD3F75F39878D05",
+      "file_size_bytes": 5415775,
+      "epoch": 300,
+      "ema_status": "TERMINAL_EMA_VERIFIED",
+      "architecture_signature": "F5676FDCAD6D59837837216267E344A8B3097E289E314C2062319A8BFB9FFB60",
+      "params_exact": 2515679,
+      "flops_raw_exact": 7854003200
+    },
+    {
+      "architecture": "SourceLocked-Stage6-B6",
+      "seed": 44,
+      "checkpoint_path": "withheld-local-ref-d631ea9bf0bd7ec1e2e4",
+      "sha256": "BBE151DD184A8E02565EFB6526D125B8112C819FEEE3DDEF3AB6A670F1E1A97B",
+      "file_size_bytes": 5415775,
+      "epoch": 300,
+      "ema_status": "TERMINAL_EMA_VERIFIED",
+      "architecture_signature": "F5676FDCAD6D59837837216267E344A8B3097E289E314C2062319A8BFB9FFB60",
+      "params_exact": 2515679,
+      "flops_raw_exact": 7854003200
+    }
+  ],
+  "datasets": {
+    "carpk": {
+      "role": "dense single-class aerial vehicle-localization shift",
+      "test_images": 459,
+      "test_manifest_path": "withheld-local-ref-81cc229ca3d8cd75b380",
+      "test_manifest_sha256": "D04420F9FA5794F57FD0E50A5B54998C6C34697EC5D47BD4B362BFDDFF0C58CF",
+      "class_mapping_path": "withheld-local-ref-cae8a27bdbe51ff9a149",
+      "class_mapping_sha256": "85FE237E62D0FB1B03E137F430A82D16E4519D4A247462AE50BB4E9371D23D34",
+      "gt_adapter": "inclusive CARPK x1,y1,x2,y2 endpoints converted to xywh with +1 width/height"
+    },
+    "uavdt": {
+      "role": "multi-class UAV traffic-domain shift",
+      "test_sequences": 20,
+      "test_frames": 16592,
+      "test_manifest_path": "withheld-local-ref-ce490b789b95b6d9686c",
+      "test_manifest_sha256": "19ECBDBD57B19BEE8435F3F3FAB86315B1D830B452864608CF91D0DAC8A85587",
+      "class_mapping_path": "withheld-local-ref-f763c51ca7ee1cedfc23",
+      "class_mapping_sha256": "5A589D99C085B7B084C1017086C25B1D885DF45B3C0C86CA1DC607E2D7A521E7",
+      "ignore_policy_path": "withheld-local-ref-b067a6641db65d204844",
+      "ignore_policy_sha256": "065DB56F196D6CBDEF665B2B8B3AF287B3BE7944A2F9EB3A7D03CAE058B8AE7D"
+    }
+  },
+  "inference": {
+    "backend": "PyTorch",
+    "precision": "FP32",
+    "imgsz": 640,
+    "batch_size": 16,
+    "conf_thres": 0.001,
+    "nms_iou_thres": 0.6,
+    "max_det": 500,
+    "tta": false,
+    "multi_scale": false,
+    "checkpoint_policy": "terminal EMA after epoch 300",
+    "model_head_unchanged": true
+  },
+  "metrics": {
+    "carpk": [
+      "AP",
+      "AP50",
+      "AP75",
+      "Recall",
+      "Precision",
+      "F1"
+    ],
+    "uavdt": [
+      "AP",
+      "AP50",
+      "AP75",
+      "Recall",
+      "Precision",
+      "F1",
+      "AP_car",
+      "AP_truck",
+      "AP_bus"
+    ],
+    "AP": "pycocotools COCOeval IoU=0.50:0.05:0.95, maxDets=500",
+    "Recall": "YOLOv5 ap_per_class mean recall at the confidence index maximizing smoothed mean F1",
+    "APS_included": false,
+    "APS_decision_made_before_predictions": true
+  },
+  "evaluator": {
+    "external_evaluator_path": "withheld-local-ref-a37810b0ced1e9ed43dd",
+    "external_evaluator_sha256": "53F42EEBC6529556EB464BEA6101957F233BCB060D9E70FC1E769B392B8B7E8E",
+    "inference_worker_path": "withheld-local-ref-13102d818859ec8f4c7a",
+    "inference_worker_sha256": "7A8A6C54AEEBD52169B0F59B900B050D39363EB0C3771ACAA3000E1DAB42E389",
+    "controller_path": "withheld-local-ref-30b40f028dbb4096f2e7",
+    "controller_sha256": "B1703A4B308C07425DD8B086D045686286D64289D9753C9CD41B3E8EB05A1B56",
+    "yolov5_val_path": "withheld-local-ref-e7e6a34dd88da1d180f2",
+    "yolov5_val_sha256": "5125973974DA212DD0151C63DA71BCE2EF0EFDA00A657A0F2E7322C242AF3EDC",
+    "yolov5_metrics_path": "withheld-local-ref-fdf05544751585cc4865",
+    "yolov5_metrics_sha256": "C6CCBE389980EE8829F98FFC457F0FD14E862D6F11EC6D7425EB9666426BCFB5"
+  },
+  "execution_order": {
+    "datasets": [
+      "carpk",
+      "uavdt"
+    ],
+    "architectures": [
+      "Meta-AP+APS-B6",
+      "Meta-AP-only-B6",
+      "RandomSearch-B6",
+      "MatchedManual-B6",
+      "SourceLocked-Stage6-B6"
+    ],
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "expected_runs": 30
+  },
+  "zero_shot": {
+    "architectures_locked_before_external_evaluation": true,
+    "external_training": false,
+    "external_fine_tuning": false,
+    "external_search": false,
+    "external_threshold_tuning": false,
+    "external_checkpoint_selection": false,
+    "verified": true,
+    "evidence": "withheld-local-ref-cfe3212b18d3ff89e90c"
+  },
+  "prohibitions": [
+    "training",
+    "fine-tuning",
+    "search",
+    "distillation",
+    "calibration",
+    "TensorRT",
+    "Jetson profiling"
+  ],
+  "inference_started_before_lock": false
+}

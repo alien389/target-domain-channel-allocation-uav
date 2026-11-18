@@ -1,0 +1,62 @@
+{
+  "created_utc": "2026-07-30T23:23:48.722454+00:00",
+  "generator": "numpy.random.Generator",
+  "bit_generator": "PCG64",
+  "stream_construction": "independent fixed method/replicate streams",
+  "p0_streams": {
+    "1042": 104200,
+    "2042": 204200,
+    "3042": 304200
+  },
+  "method_streams": [
+    {
+      "method": "NSGA-II AP+APS",
+      "replicate": 1042,
+      "seed": 104201
+    },
+    {
+      "method": "NSGA-II AP+APS",
+      "replicate": 2042,
+      "seed": 204201
+    },
+    {
+      "method": "NSGA-II AP+APS",
+      "replicate": 3042,
+      "seed": 304201
+    },
+    {
+      "method": "Single-objective evolutionary search (AP-only)",
+      "replicate": 1042,
+      "seed": 104202
+    },
+    {
+      "method": "Single-objective evolutionary search (AP-only)",
+      "replicate": 2042,
+      "seed": 204202
+    },
+    {
+      "method": "Single-objective evolutionary search (AP-only)",
+      "replicate": 3042,
+      "seed": 304202
+    },
+    {
+      "method": "Warm-started constrained Random Search",
+      "replicate": 1042,
+      "seed": 104203
+    },
+    {
+      "method": "Warm-started constrained Random Search",
+      "replicate": 2042,
+      "seed": 204203
+    },
+    {
+      "method": "Warm-started constrained Random Search",
+      "replicate": 3042,
+      "seed": 304203
+    }
+  ],
+  "mutable_state_shared_across_methods": false,
+  "state_saved_after_every_proposal": true,
+  "state_saved_after_every_method_record": true,
+  "status": "PASS"
+}

@@ -1,0 +1,329 @@
+{
+  "schema": "stage12_stage6_detect_grid_refresh_export_v1",
+  "created_utc": "2026-08-10T21:08:34.124370+00:00",
+  "status": "PASS",
+  "scientific_change": "NONE_EXPORT_CACHE_REPAIR_ONLY",
+  "source_checkpoint": "withheld-local-ref-bb9c726a099f843e34c2",
+  "source_checkpoint_sha256": "0525146141B77BB8311E316B69F1AEC16E77E1A43A2B54E6B48DDCD19CE489F2",
+  "state_dict_sha256_before": "4F1C715C5EEC6810F08B5994BF895BE73331A1C61397A548B4BD6F3A7C2634A9",
+  "state_dict_sha256_after": "4F1C715C5EEC6810F08B5994BF895BE73331A1C61397A548B4BD6F3A7C2634A9",
+  "state_dict_unchanged": true,
+  "cache_before": {
+    "expected_anchor_pixels": [
+      [
+        [
+          3.06640625,
+          4.8046875
+        ],
+        [
+          4.37109375,
+          9.203125
+        ],
+        [
+          8.0703125,
+          6.953125
+        ]
+      ],
+      [
+        [
+          7.7734375,
+          14.3671875
+        ],
+        [
+          16.96875,
+          9.3515625
+        ],
+        [
+          15.203125,
+          19.8125
+        ]
+      ],
+      [
+        [
+          32.03125,
+          16.921875
+        ],
+        [
+          29.125,
+          35.375
+        ],
+        [
+          63.21875,
+          48.125
+        ]
+      ]
+    ],
+    "cached_anchor_pixels": [
+      [
+        [
+          10.0,
+          13.0
+        ],
+        [
+          16.0,
+          30.0
+        ],
+        [
+          33.0,
+          23.0
+        ]
+      ],
+      [
+        [
+          30.0,
+          61.0
+        ],
+        [
+          62.0,
+          45.0
+        ],
+        [
+          59.0,
+          119.0
+        ]
+      ],
+      [
+        [
+          116.0,
+          90.0
+        ],
+        [
+          156.0,
+          198.0
+        ],
+        [
+          373.0,
+          326.0
+        ]
+      ]
+    ],
+    "per_scale_match": [
+      false,
+      false,
+      false
+    ],
+    "all_scales_match": false,
+    "grid_shapes": [
+      [
+        1,
+        3,
+        80,
+        80,
+        2
+      ],
+      [
+        1,
+        3,
+        40,
+        40,
+        2
+      ],
+      [
+        1,
+        3,
+        20,
+        20,
+        2
+      ]
+    ],
+    "anchor_grid_shapes": [
+      [
+        1,
+        3,
+        80,
+        80,
+        2
+      ],
+      [
+        1,
+        3,
+        40,
+        40,
+        2
+      ],
+      [
+        1,
+        3,
+        20,
+        20,
+        2
+      ]
+    ]
+  },
+  "cache_after": {
+    "expected_anchor_pixels": [
+      [
+        [
+          3.06640625,
+          4.8046875
+        ],
+        [
+          4.37109375,
+          9.203125
+        ],
+        [
+          8.0703125,
+          6.953125
+        ]
+      ],
+      [
+        [
+          7.7734375,
+          14.3671875
+        ],
+        [
+          16.96875,
+          9.3515625
+        ],
+        [
+          15.203125,
+          19.8125
+        ]
+      ],
+      [
+        [
+          32.03125,
+          16.921875
+        ],
+        [
+          29.125,
+          35.375
+        ],
+        [
+          63.21875,
+          48.125
+        ]
+      ]
+    ],
+    "cached_anchor_pixels": [
+      [
+        [
+          3.06640625,
+          4.8046875
+        ],
+        [
+          4.37109375,
+          9.203125
+        ],
+        [
+          8.0703125,
+          6.953125
+        ]
+      ],
+      [
+        [
+          7.7734375,
+          14.3671875
+        ],
+        [
+          16.96875,
+          9.3515625
+        ],
+        [
+          15.203125,
+          19.8125
+        ]
+      ],
+      [
+        [
+          32.03125,
+          16.921875
+        ],
+        [
+          29.125,
+          35.375
+        ],
+        [
+          63.21875,
+          48.125
+        ]
+      ]
+    ],
+    "per_scale_match": [
+      true,
+      true,
+      true
+    ],
+    "all_scales_match": true,
+    "grid_shapes": [
+      [
+        1,
+        3,
+        80,
+        80,
+        2
+      ],
+      [
+        1,
+        3,
+        40,
+        40,
+        2
+      ],
+      [
+        1,
+        3,
+        20,
+        20,
+        2
+      ]
+    ],
+    "anchor_grid_shapes": [
+      [
+        1,
+        3,
+        80,
+        80,
+        2
+      ],
+      [
+        1,
+        3,
+        40,
+        40,
+        2
+      ],
+      [
+        1,
+        3,
+        20,
+        20,
+        2
+      ]
+    ]
+  },
+  "output_onnx": "withheld-local-ref-ba7f75c8eeb128c4839d",
+  "output_onnx_sha256": "CEE2C8612BC93FD55BB6939B826B27767D8F156D3CE07036F5A60DF5DD213B7A",
+  "output_onnx_size_bytes": 10504407,
+  "opset": 17,
+  "static_shape": [
+    1,
+    3,
+    640,
+    640
+  ],
+  "output_shape": [
+    1,
+    25200,
+    15
+  ],
+  "embedded_nms": false,
+  "parity": {
+    "image": "withheld-local-ref-c9f0fb8d0498dd415ad9",
+    "torch_shape": [
+      1,
+      25200,
+      15
+    ],
+    "onnx_shape": [
+      1,
+      25200,
+      15
+    ],
+    "all_finite": true,
+    "maximum_absolute_error": 0.001499176025390625,
+    "mean_absolute_error": 4.557095508062048e-06,
+    "p99_absolute_error": 6.4849853515625e-05,
+    "allclose_rtol_1e_4_atol_1e_5": false
+  }
+}

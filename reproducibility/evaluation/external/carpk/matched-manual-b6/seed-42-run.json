@@ -1,0 +1,14 @@
+{
+  "schema": "stage15_external_run_manifest_v1",
+  "status": "PASS",
+  "dataset": "carpk",
+  "architecture": "MatchedManual-B6",
+  "seed": 42,
+  "checkpoint_sha256": "08C9ABBBC72879CF3C74DB16E81C62B59AA40DCF181F13650C1448AD278EE1F4",
+  "raw_prediction_path": "withheld-local-ref-9ff5ee080c2d9b7af6fd",
+  "raw_prediction_sha256": "500485841E926551879EA4266BE7AEFCE894999556CD3F14B4B6E593E79C293F",
+  "prediction_path": "withheld-local-ref-34a3a3debabb10053917",
+  "prediction_sha256": "446DA8946D9153A64DE58445C9333573695CBFEDBFBDB5C158005FB165B707F1",
+  "metrics_path": "withheld-local-ref-2c3e1f0813dd9b8a31cf",
+  "metrics_sha256": "F3FBD38A285E0A297AE46CBD6807E60085975233C769AD261D46C647711D1202"
+}

@@ -1,0 +1,109 @@
+{
+  "schema": "meta_channel_allocation_jetson_q1_protocol_lock_v1",
+  "status": "LOCKED_BEFORE_ACTUAL_ENGINE_ACCURACY_AND_HEAVY_MEASUREMENT",
+  "project_root": "withheld-local-ref-d3ffa1162b863e973efa",
+  "platform": "Jetson Xavier NX",
+  "seed": 42,
+  "locked_models": 5,
+  "model_ids": [
+    "meta_ap_aps_b6",
+    "matched_manual_b6",
+    "meta_ap_only_b6",
+    "random_search_b6",
+    "source_locked_stage6_b6"
+  ],
+  "engine_matrix": {
+    "fp32": 5,
+    "fp16": 5,
+    "selective_int8_fp16": 5,
+    "aggressive_calibrated_int8_meta_only": 1,
+    "total": 16
+  },
+  "quantization": {
+    "selective_policy_shared_by_all_five_models": true,
+    "aggressive_policy_models": ["meta_ap_aps_b6"],
+    "calibration_images": 1024,
+    "calibration_source": "train6471 only",
+    "val548_calibration_images": 0,
+    "heldout1610_calibration_images": 0,
+    "qat_executed": false,
+    "post_quantization_finetuning": false,
+    "result_dependent_policy_tuning": false
+  },
+  "actual_engine_accuracy": {
+    "splits": {
+      "val548": 548,
+      "heldout1610": 1610
+    },
+    "engines_per_split": 16,
+    "total_units": 32,
+    "imgsz": 640,
+    "static_batch_size": 1,
+    "single_scale": true,
+    "conf_thres": 0.001,
+    "nms_iou_thres": 0.6,
+    "max_det": 500,
+    "multi_label": true,
+    "tta": false,
+    "official_visdrone_evaluator_sha256": "3372AB7770AE14B47BBEC4CBF5CB29271DED04F72514A5A23727374C02D95D90",
+    "historical_tensor_runtime_evaluator_sha256": "097CE6C4322E09F967B4F04102DD52662FCD4A32A8EA3200CCC4E76C14599754",
+    "yolov5_val_sha256": "5125973974DA212DD0151C63DA71BCE2EF0EFDA00A657A0F2E7322C242AF3EDC",
+    "supplemental_area_evaluator_sha256": "9BD5E69F949B90EC41B7A8D274155E980EF0C90F53118E2CA5E1974E79DF6BF5",
+    "raw_post_nms_predictions_retained": true
+  },
+  "heavy_benchmark": {
+    "dataset_role": "1,610-image held-out target split",
+    "full_split_images": 1610,
+    "profiling_workload_images": 300,
+    "profiling_workload_sha256": "94CC4330906A2D11260BE1C996F75FCFD267D7E5F416E6B62F6B728BD928A93D",
+    "engines": 11,
+    "precision_composition": {
+      "fp16": 5,
+      "selective_int8_fp16": 5,
+      "aggressive_int8_meta_only": 1
+    },
+    "modes": [
+      "timing_e2e",
+      "timing_forward",
+      "memory"
+    ],
+    "independent_runs": 5,
+    "atomic_units": 165,
+    "batch_size": 1,
+    "imgsz": 640,
+    "stride": 32,
+    "timing_conf_thres": 0.25,
+    "timing_iou_thres": 0.45,
+    "max_det": 500,
+    "e2e_warmup": 100,
+    "e2e_timed": 1000,
+    "forward_preload": 300,
+    "forward_warmup": 300,
+    "forward_timed": 3000,
+    "memory_warmup": 100,
+    "memory_timed": 300,
+    "power_sample_period_seconds": 0.1,
+    "memory_sample_period_seconds": 0.1,
+    "power_domain": "VDD_IN",
+    "fixed_idle_power_w": 3.578937,
+    "historical_benchmark_evaluator_sha256": "D8AB28E39D09E5EB801AC51B024F602842E342F2902ADC26421D37E75CB16FE7"
+  },
+  "measurement_silence": {
+    "begins_at_marker": "08_state/benchmark/MEASUREMENT_ACTIVE",
+    "external_ssh_commands_permitted": false,
+    "external_polling_permitted": false,
+    "background_codex_activity_permitted": false,
+    "only_campaign_evaluator_telemetry_permitted": true
+  },
+  "scientific_prohibitions": {
+    "retraining": true,
+    "qat": true,
+    "kd": true,
+    "search_reopening": true,
+    "checkpoint_reselection": true,
+    "architecture_changes": true,
+    "outcome_dependent_threshold_tuning": true,
+    "outcome_dependent_precision_policy_tuning": true,
+    "inferential_p_values_for_deployment_repetitions": true
+  }
+}

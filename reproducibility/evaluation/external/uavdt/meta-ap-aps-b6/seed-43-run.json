@@ -1,0 +1,14 @@
+{
+  "schema": "stage15_external_run_manifest_v1",
+  "status": "PASS",
+  "dataset": "uavdt",
+  "architecture": "Meta-AP+APS-B6",
+  "seed": 43,
+  "checkpoint_sha256": "E59BCA14BE3A5B343D99B540A58B1E7AE7E9BA8444F1E5907B16CB813B1349E9",
+  "raw_prediction_path": "withheld-local-ref-1382b60cc6e800a861fa",
+  "raw_prediction_sha256": "4730D6694FCADAB028DC4E2031B535934D61B4D56217ED8E36220AD06AEE841F",
+  "prediction_path": "withheld-local-ref-f8f0ee2e24347dfaa26c",
+  "prediction_sha256": "4CB00443A883BFC7EEFDCE6CBB13A2F1D6E161D308B3AA66FE695CC4CBF968A3",
+  "metrics_path": "withheld-local-ref-7ea9c474e916dc7cdc92",
+  "metrics_sha256": "3D4BA6AC46A5DC7CCC7B58FEF180C96C12FE0BF0DBEC202C5BAF05DECEED550E"
+}

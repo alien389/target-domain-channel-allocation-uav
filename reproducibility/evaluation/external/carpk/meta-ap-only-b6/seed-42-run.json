@@ -1,0 +1,14 @@
+{
+  "schema": "stage15_external_run_manifest_v1",
+  "status": "PASS",
+  "dataset": "carpk",
+  "architecture": "Meta-AP-only-B6",
+  "seed": 42,
+  "checkpoint_sha256": "9FFAE3B5F848A7D6C8DEC1246718E4E22E6DB82560E318213732D886A6E82FB0",
+  "raw_prediction_path": "withheld-local-ref-9b7239daed8d1f8416e7",
+  "raw_prediction_sha256": "97BCB96EE1BC200A0B8B7577E0B078DB7F59E77EA3665DD1608807C7760FE007",
+  "prediction_path": "withheld-local-ref-db3a2b1041c75b54260a",
+  "prediction_sha256": "7F4A1C446A0C5C1197E0875D1A68125235365271043885C0D3DC00BFA18A96B3",
+  "metrics_path": "withheld-local-ref-0ae09a7736b4f964cfa3",
+  "metrics_sha256": "D17BC599EFBCED39D055670F3D6F8511033456296CF068B175764FFEB7FE1228"
+}

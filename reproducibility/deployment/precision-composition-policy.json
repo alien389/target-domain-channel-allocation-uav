@@ -1,0 +1,36 @@
+{
+  "schema": "meta_jetson_precision_composition_policy_v1",
+  "status": "FROZEN_BEFORE_CURRENT_ENGINE_INSPECTION",
+  "historical_classification_script_recovered": false,
+  "historical_evidence_note": "Historical raw Engine Inspector outputs were recovered, but no executed layer-composition classifier was found. This transparent convention is frozen before inspecting current engines.",
+  "inspector_source": "TensorRT ICudaEngine.create_engine_inspector with LayerInformationFormat.JSON",
+  "required_build_profiling_verbosity": "DETAILED",
+  "computational_layer_rule": {
+    "description": "A TensorRT layer is computational when ParameterType or LayerType identifies convolution, deconvolution, fully connected, or matrix multiplication. Reformat, shuffle, slice, resize, pooling, concatenation, pointwise-only, and copy layers are excluded from the computational denominator and retained in the non-computational count.",
+    "accepted_type_tokens": [
+      "CONVOLUTION",
+      "DECONVOLUTION",
+      "FULLYCONNECTED",
+      "MATRIXMULTIPLY"
+    ]
+  },
+  "precision_rule": {
+    "evidence_fields": [
+      "Inputs[*].Format/Datatype",
+      "Outputs[*].Format/Datatype",
+      "Weights.Type"
+    ],
+    "bias_type_excluded": true,
+    "classes": [
+      "INT8",
+      "FP16",
+      "FP32",
+      "MIXED",
+      "OTHER"
+    ],
+    "mixed_definition": "More than one of INT8, FP16, or FP32 appears in the activation and weight evidence for a computational layer.",
+    "share_denominator": "Total computational layers under the frozen computational_layer_rule."
+  },
+  "detect_head_rule": "Report all computational layers whose names contain /model.24/m or model.24.m, including their measured precision class.",
+  "interpretation_lock": "Layer-count shares are composition shares, not execution-time shares."
+}

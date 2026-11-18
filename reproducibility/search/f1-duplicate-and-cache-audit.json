@@ -1,0 +1,11 @@
+{
+  "created_utc": "2026-08-05T18:33:43.700467+00:00",
+  "method_records": 720,
+  "unique_search_record_ids": 720,
+  "physical_cache_rows": 500,
+  "unique_physical_evaluation_ids": 500,
+  "duplicate_physical_training": false,
+  "cache_hits": 111,
+  "duplicate_rejections": 2,
+  "status": "PASS"
+}

@@ -1,0 +1,33 @@
+{
+  "schema": "stage07_fidelity2_recovery25_protocol_v1",
+  "created_utc": "2026-08-05T20:13:52.789166+00:00",
+  "approval_token_consumed": "APPROVE_STAGE06A_FIDELITY2_PROMOTION_LOCK",
+  "stage06a_output_manifest_sha256": "E5410026CF52D69C086A6044AEB0AC4B5F0C68B2129D5DDFB05E86D67FFA23C2",
+  "promoted_method_records": 11,
+  "unique_physical_recovery25_jobs": 10,
+  "deduplicated_physical_jobs": 1,
+  "targetmanual_executed_first": true,
+  "initialization": "fresh reconstruction from frozen SearchParent, widths, and Taylor channel indices",
+  "fidelity1_checkpoint_initialization": false,
+  "epochs": 25,
+  "seed": 42,
+  "train": "meta-train5177",
+  "validation": "meta-inner-val1294",
+  "imgsz": 640,
+  "batch_size": 16,
+  "explicit_evaluation": {
+    "precision": "FP32",
+    "images": 1294,
+    "conf_thres": 0.001,
+    "nms_iou": 0.6,
+    "max_det": 500,
+    "augment": false,
+    "tta": false
+  },
+  "kd_enabled": false,
+  "official_val548_locked": true,
+  "heldout1610_locked": true,
+  "stage08a_started": false,
+  "status": "LOCKED",
+  "stage07_protocol_sha256": "5783C41C5F6CF41ED0E132ED11238B79D50E311BC3059E47E4053B8B73841104"
+}

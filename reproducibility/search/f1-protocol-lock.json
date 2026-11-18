@@ -1,0 +1,226 @@
+{
+  "schema": "stage05_protocol_lock_v1",
+  "created_utc": "2026-07-30T23:21:44.081287+00:00",
+  "approval_token": "APPROVE_AMENDMENT_A2_START_STAGE05",
+  "scientific_contribution": "Target-domain, budget-constrained, small-object-aware evolutionary channel-allocation search followed by locked held-out confirmation and independent post-search Jetson validation.",
+  "objectives": [
+    "maximize AP@[0.5:0.95]",
+    "maximize APS"
+  ],
+  "objective_scalarization": false,
+  "constraints": {
+    "recall_floor_inclusive_full_precision": "0.30035872606099606",
+    "params_exact_integer_lower_inclusive": 2440209,
+    "params_exact_integer_upper_inclusive": 2515679,
+    "flops_raw_exact_integer_lower_inclusive": 7618383104,
+    "flops_raw_exact_integer_upper_inclusive": 7854003200,
+    "flops_g_lower_display": "7.618383104",
+    "flops_g_upper_display": "7.8540032",
+    "structural_validity": true
+  },
+  "numeric_source_of_truth": {
+    "params": "exact integer only",
+    "flops": "raw exact integer equal to THOP MACs x 2",
+    "recall": "full-precision explicit FP32 evaluator JSON",
+    "rounded_values_used_for_selection": false,
+    "authoritative_files": [
+      "explicit metrics JSON",
+      "reconstruction manifest",
+      "physical evaluation manifest",
+      "global evaluation cache",
+      "method-level search record"
+    ]
+  },
+  "methods": [
+    "NSGA-II AP+APS",
+    "Single-objective evolutionary search (AP-only)",
+    "Warm-started constrained Random Search"
+  ],
+  "replicates": [
+    1042,
+    2042,
+    3042
+  ],
+  "run_order": [
+    {
+      "method": "NSGA-II AP+APS",
+      "replicate": 1042
+    },
+    {
+      "method": "NSGA-II AP+APS",
+      "replicate": 2042
+    },
+    {
+      "method": "NSGA-II AP+APS",
+      "replicate": 3042
+    },
+    {
+      "method": "Single-objective evolutionary search (AP-only)",
+      "replicate": 1042
+    },
+    {
+      "method": "Single-objective evolutionary search (AP-only)",
+      "replicate": 2042
+    },
+    {
+      "method": "Single-objective evolutionary search (AP-only)",
+      "replicate": 3042
+    },
+    {
+      "method": "Warm-started constrained Random Search",
+      "replicate": 1042
+    },
+    {
+      "method": "Warm-started constrained Random Search",
+      "replicate": 2042
+    },
+    {
+      "method": "Warm-started constrained Random Search",
+      "replicate": 3042
+    }
+  ],
+  "rng_streams": [
+    {
+      "method": "NSGA-II AP+APS",
+      "replicate": 1042,
+      "stream_seed": 104201
+    },
+    {
+      "method": "NSGA-II AP+APS",
+      "replicate": 2042,
+      "stream_seed": 204201
+    },
+    {
+      "method": "NSGA-II AP+APS",
+      "replicate": 3042,
+      "stream_seed": 304201
+    },
+    {
+      "method": "Single-objective evolutionary search (AP-only)",
+      "replicate": 1042,
+      "stream_seed": 104202
+    },
+    {
+      "method": "Single-objective evolutionary search (AP-only)",
+      "replicate": 2042,
+      "stream_seed": 204202
+    },
+    {
+      "method": "Single-objective evolutionary search (AP-only)",
+      "replicate": 3042,
+      "stream_seed": 304202
+    },
+    {
+      "method": "Warm-started constrained Random Search",
+      "replicate": 1042,
+      "stream_seed": 104203
+    },
+    {
+      "method": "Warm-started constrained Random Search",
+      "replicate": 2042,
+      "stream_seed": 204203
+    },
+    {
+      "method": "Warm-started constrained Random Search",
+      "replicate": 3042,
+      "stream_seed": 304203
+    }
+  ],
+  "search": {
+    "population_size": 16,
+    "generations": 4,
+    "offspring_per_generation": 16,
+    "new_records_per_run": 64,
+    "p0_records_per_run": 16,
+    "crossover_probability": "0.90",
+    "crossover": "group-wise uniform",
+    "per_gene_parent_probability": "0.50",
+    "individual_mutation_probability": "0.35",
+    "mutation_gene_count_distribution": {
+      "1": "0.70",
+      "2": "0.25",
+      "3": "0.05"
+    },
+    "mutation_delta_distribution": {
+      "8": "0.70",
+      "16": "0.25",
+      "24": "0.05"
+    },
+    "mutation_sign_distribution": {
+      "-": "0.50",
+      "+": "0.50"
+    },
+    "repair_rule": "Deterministic nearest certified feasible archive signature by normalized Manhattan width distance; ties by lower FLOPs raw integer, lower Params integer, then signature SHA256.",
+    "within_run_duplicate_rejection": true,
+    "random_sampling": "uniform without replacement from approved archive5000"
+  },
+  "training": {
+    "recovery_epochs": 8,
+    "training_seed": 42,
+    "train_images": 5177,
+    "validation_images": 1294,
+    "imgsz": 640,
+    "batch_size": 16,
+    "kd": false,
+    "max_concurrent_gpu_jobs": 1
+  },
+  "evaluation_settings": {
+    "image_count": 1294,
+    "imgsz": 640,
+    "batch_size": 16,
+    "confidence_threshold": "0.001",
+    "nms_iou_threshold": "0.60",
+    "max_det": 500,
+    "augment": false,
+    "tta": false,
+    "precision": "FP32",
+    "area_definitions": {
+      "small": "[0,1024]",
+      "medium": "[1024,9216]",
+      "large": "[9216,1e10]"
+    }
+  },
+  "evaluation_settings_hash": "90191B6D8BDA1F8E40A17FE536AAE8185123C391567FE099C8719ED06D308EF5",
+  "evaluation_id_schema": {
+    "name": "stage05_global_physical_evaluation_id_v2",
+    "includes_evaluator_and_precision": true
+  },
+  "gene_space": {
+    "version": "R1",
+    "dependency_groups": 35,
+    "channel_quantum": 8
+  },
+  "source_hashes": {
+    "search_parent": "15E0E4C80677F9E01163D66CE9844C6ED96FF9E922D4FDA5530A3425A3009659",
+    "taylor_ranking": "8745C48A2BBD942D2EA7354766815C0DD4A9C90777F46C2F322885B2B5A832EB",
+    "dependency_manifest": "D12F42D9C7390E9AEA1376DDA2F0FEB9A891C6BB2B56E41B3904174D20DD13B5",
+    "gene_space_manifest": "27E0CA4844F076AB3D87B775FAB1566E8BEF9CA608D39AFDDA84BFB2070B67E2",
+    "feasible_archive": "8120F290D0007EF78CFFBA61FC7F4CABCC424C69F858A87951DDE1449FBE2D7B",
+    "data_split": "B1D9C25D1FBA177B4D4A06AC10291AB947FC32597E23BA3A966E72A12A70159D",
+    "recovery_protocol": "9D31F9FBBDE1CCACEC12322A2E24C3DB8904EE1A564D6CB4A18A91F65CCB2D18",
+    "evaluator": "014637E488BCCE88889134A01FB3D2024C6F4F4742C882FE92D2DE242E7D9692",
+    "evaluator_wrapper": "2DAEC66AFE8D1C80EDD2261F64FFE4D0FD2F81908B64F1ACBE5B00A7461C628B",
+    "evaluator_source": "9BD5E69F949B90EC41B7A8D274155E980EF0C90F53118E2CA5E1974E79DF6BF5",
+    "visdrone_python_port": "3372AB7770AE14B47BBEC4CBF5CB29271DED04F72514A5A23727374C02D95D90",
+    "training_wrapper": "C52819FF9A4DD9EA8C68BAAA5964CA35D26722998CF8E603FC9AA08E0DE39984",
+    "r1_reconstruction_implementation": "318C5E12F10BE0AF6533BC1E8BC4889CA2277B3325C988135122A4A9957A3B42",
+    "stage04_global_cache": "0FE5E75D6E97DB2297A4E9C0D73CAEC7FA69E03E9052EBB9548CCB804E7C3FCB",
+    "stage04_method_records": "BD708EFEB2D06071BC5D794113984512C04B6B9B3D7CA58346825689C53B806C",
+    "protocol_amendment_A2": "8FDADBFD0F3ED78C2C6B65D1BB24A8AF08F2E556CA70EB5BC4CB7E041E0CB1A4"
+  },
+  "storage": {
+    "warning_free_gib": 40.0,
+    "hard_stop_before_new_job_free_gib": 25.0,
+    "streaming_retention": true
+  },
+  "locks": {
+    "val548_access": false,
+    "heldout1610_access": false,
+    "fidelity2": false,
+    "kd": false,
+    "tensorrt": false,
+    "jetson_profiling": false
+  },
+  "preflight_sha256": "4263FE140F4DFC06DA13038C64916495F62BA25357406CBEF1C672A76FF736F2",
+  "stage05_protocol_sha256": "ECECA0D1E07324E23CCB50EEED1585BED3C784FFB57123E531E19279E60700F8"
+}

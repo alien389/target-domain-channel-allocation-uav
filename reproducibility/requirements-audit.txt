@@ -1,0 +1,5 @@
+numpy>=1.26
+zstandard==0.25.0
+safetensors>=0.4
+pycocotools>=2.0.7
+opencv-python>=4.8

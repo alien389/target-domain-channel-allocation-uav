@@ -1,0 +1,12 @@
+{
+  "created_utc": "2026-08-05T20:48:33.888812+00:00",
+  "source": "TargetManual-B6-reference Stage07 explicit FP32 inner-val1294 evaluation",
+  "physical_candidate_id": "F2PHYS-AEA2D0A18DAC15E4",
+  "fidelity2_evaluation_id": "4A04BAD64A8D661A91A5D0042AFE8771A0B4F80C40D16EE11D2E000A8DB3E242",
+  "targetmanual_recall_full_precision": "0.32158469492239289",
+  "offset": "0.002",
+  "recall_floor_f2_full_precision": "0.31958469492239289",
+  "formula": "Recall(TargetManual_F2) - 0.002",
+  "f1_floor_reused": false,
+  "status": "LOCKED"
+}

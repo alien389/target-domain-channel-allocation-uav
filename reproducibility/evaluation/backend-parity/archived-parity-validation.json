@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "image_count": 2158,
+  "per_image_model_pairs": 10790,
+  "new_model_split_arm_metrics": 20,
+  "same_input_hash_verified_all": true,
+  "official_evaluator_recomputed_equal_all": true,
+  "created_utc": "2026-10-26T18:00:05.372512+00:00",
+  "source_hashes": {
+    "analysis_script": "273F424E755A158D353B3675226C961E4B7C5F2826C17E9A6893CE6BD7A6BC3C",
+    "accuracy_adapter": "8B875731E0035531B6698B9D000324EF83238862BC405B70A2CA63A9BE288213",
+    "official_port": "3372AB7770AE14B47BBEC4CBF5CB29271DED04F72514A5A23727374C02D95D90",
+    "matching_source": "D7A1D4741BFBF0C6C6713E5753F4A249C115BE4CA5A88F327A83FFD1CBBA8998"
+  }
+}

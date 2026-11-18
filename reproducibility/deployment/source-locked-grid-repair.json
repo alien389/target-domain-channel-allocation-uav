@@ -1,0 +1,99 @@
+{
+  "schema": "stage12_stage6_stale_detect_grid_repair_v1",
+  "created_utc": "2026-08-10T21:13:39.830664+00:00",
+  "status": "PASS_LOCAL_STAGING",
+  "blocker": "TensorRT FP32 Stage-6 AP near zero while frozen PyTorch FP32 AP was normal",
+  "root_cause": "serialized Detect anchor_grid retained COCO pixel anchors while Detect.anchors contained trained target-domain anchors; static 640x640 export did not invalidate the shape-matching cache",
+  "repair_scope": "export cache refresh only; no model weights, architecture, checkpoint, data, quantization policy, or evaluator changed",
+  "source_checkpoint_sha256": "0525146141B77BB8311E316B69F1AEC16E77E1A43A2B54E6B48DDCD19CE489F2",
+  "state_dict_unchanged": true,
+  "old_fp32_onnx": {
+    "path": "withheld-local-ref-21dfeb99eefdf922005d",
+    "sha256": "76FB9788D75B743D7AFAFE63DBAEBDFB7CE50B9619751F0C79DBB4E4BB49A260",
+    "size_bytes": 10504407
+  },
+  "new_fp32_onnx": {
+    "path": "withheld-local-ref-688f1fa786ed848213ad",
+    "sha256": "CEE2C8612BC93FD55BB6939B826B27767D8F156D3CE07036F5A60DF5DD213B7A",
+    "size_bytes": 10504407
+  },
+  "old_selective_qdq": {
+    "path": "withheld-local-ref-2c30720cf444cfa6f09c",
+    "sha256": "192DB475182F3C81A173EC8B70DEF848DB2D7A29526F99ACFFA11CBED83B8B5A",
+    "size_bytes": 10732719
+  },
+  "new_selective_qdq": {
+    "path": "withheld-local-ref-aa79b9a0f33cbac22f0a",
+    "sha256": "301126F5CC8294184893E4643FC22F72926DD2F8F86F90F14F793B4F2425C2DC",
+    "size_bytes": 10732719
+  },
+  "export_report": {
+    "path": "withheld-local-ref-3864969dc7488f3c07d2",
+    "sha256": "EE7D6A5C67594E7D533B8A3E8A97D6919CE6C906E63158C3C8C751D025650260",
+    "size_bytes": 5656
+  },
+  "qdq_report": {
+    "path": "withheld-local-ref-4b057c581cc140b47f2f",
+    "sha256": "3B472E97EB6433F22FB60DAC270C926A6828FA1A5649676848549EE6CFF4D99B",
+    "size_bytes": 11969
+  },
+  "canonical_onnx_manifest": {
+    "path": "withheld-local-ref-cc543829284706da5062",
+    "sha256": "EEB149C15ACC83F40066775FFB6A0DC5B627677F29E43D1E925F92976249952E",
+    "size_bytes": 6369
+  },
+  "selective_qdq_manifest": {
+    "path": "withheld-local-ref-abcb2b3ddd3efc8e61ee",
+    "sha256": "5DFAA3909729A911EDA900F9ADC50DD8B033097550CBE894856D3486CD14B40D",
+    "size_bytes": 56344
+  },
+  "archived_files": [
+    {
+      "path": "withheld-local-ref-21dfeb99eefdf922005d",
+      "sha256": "76FB9788D75B743D7AFAFE63DBAEBDFB7CE50B9619751F0C79DBB4E4BB49A260",
+      "size_bytes": 10504407
+    },
+    {
+      "path": "withheld-local-ref-2c30720cf444cfa6f09c",
+      "sha256": "192DB475182F3C81A173EC8B70DEF848DB2D7A29526F99ACFFA11CBED83B8B5A",
+      "size_bytes": 10732719
+    },
+    {
+      "path": "withheld-local-ref-318f064ad4eae3e27601",
+      "sha256": "B374169D2E1CB66E2BA6A1BDF42899C5394DDAB44B1BD478B34B7D1E447AAD40",
+      "size_bytes": 10058
+    },
+    {
+      "path": "withheld-local-ref-e2f377142e41c825129c",
+      "sha256": "9A548CE067E584BDF9F853AA7C05630F94BDBD9F9851FF2DF611DA6C29A8B7D8",
+      "size_bytes": 3172
+    },
+    {
+      "path": "withheld-local-ref-e16c2aa1f5f225825864",
+      "sha256": "275AB2A4E5522FFE86FB56CA86897BA93E9D5414A4029FEFDCFEFF18514A059F",
+      "size_bytes": 5743
+    },
+    {
+      "path": "withheld-local-ref-c853dfc644a33e69031e",
+      "sha256": "1A98FC5A11CC0BDAD24E612C594407496F61F3CEA652FCFBB97F5C2197D0493F",
+      "size_bytes": 2342
+    },
+    {
+      "path": "withheld-local-ref-f5b6cbfd3ef681a2a34c",
+      "sha256": "F27EAF454D6A30377259873E0C3CEF535231E361CA2208E8D89FA1A10A721A91",
+      "size_bytes": 55901
+    },
+    {
+      "path": "withheld-local-ref-9477ecbfb9a4856208d8",
+      "sha256": "C2956E31BD62811604B4D83616FBF9675E847C47A5E3E7FA4B194B4DEB86399F",
+      "size_bytes": 11937
+    }
+  ],
+  "required_remote_rebuilds": [
+    "source_locked_stage6_b6_seed42_trt_fp32",
+    "source_locked_stage6_b6_seed42_trt_fp16",
+    "source_locked_stage6_b6_seed42_trt_selective_int8_fp16"
+  ],
+  "required_accuracy_reruns": 6,
+  "heavy_benchmark_started": false
+}

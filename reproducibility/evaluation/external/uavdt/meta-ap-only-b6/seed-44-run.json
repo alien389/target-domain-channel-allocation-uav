@@ -1,0 +1,14 @@
+{
+  "schema": "stage15_external_run_manifest_v1",
+  "status": "PASS",
+  "dataset": "uavdt",
+  "architecture": "Meta-AP-only-B6",
+  "seed": 44,
+  "checkpoint_sha256": "EDE9859BE7148C7C6A7AD0900CE4EFEE213747789582F9DAB56C8E530D2940D6",
+  "raw_prediction_path": "withheld-local-ref-3139504c7cc7f00337be",
+  "raw_prediction_sha256": "7F7E35E4F3368CEBBB74E67C53EB38A3694F23DDEA8C6896B67020EA60044FC2",
+  "prediction_path": "withheld-local-ref-b20dcbe6d9a3ca728f64",
+  "prediction_sha256": "8E9BA52DD5470B7BB21B5D990B63C4DBDFB367D2C4A12D3B39867F6BB6B8249E",
+  "metrics_path": "withheld-local-ref-dca848414d7acc7c060c",
+  "metrics_sha256": "9902CC6637EAA124C30154F29DC7CE65E3BA01904D3C05C078F8DC541D2EC478"
+}

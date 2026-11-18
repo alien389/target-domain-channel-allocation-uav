@@ -1,0 +1,196 @@
+{
+  "schema": "stage15_visdrone_canonical_inference_config_v1",
+  "created_utc": "2026-08-20T06:10:57.158210+00:00",
+  "status": "PASS",
+  "settings": {
+    "backend": {
+      "value": "PyTorch",
+      "source": "withheld-local-ref-3ed1d55bbabe7e04344d"
+    },
+    "precision": {
+      "value": "FP32",
+      "source": "withheld-local-ref-3ed1d55bbabe7e04344d"
+    },
+    "imgsz": {
+      "value": 640,
+      "source": "withheld-local-ref-3ed1d55bbabe7e04344d"
+    },
+    "batch_size": {
+      "value": 16,
+      "source": "withheld-local-ref-3ed1d55bbabe7e04344d"
+    },
+    "conf_thres": {
+      "value": 0.001,
+      "source": "withheld-local-ref-3ed1d55bbabe7e04344d"
+    },
+    "nms_iou_thres": {
+      "value": 0.6,
+      "source": "withheld-local-ref-3ed1d55bbabe7e04344d"
+    },
+    "max_det": {
+      "value": 500,
+      "source": "withheld-local-ref-3ed1d55bbabe7e04344d"
+    },
+    "tta": {
+      "value": false,
+      "source": "withheld-local-ref-3ed1d55bbabe7e04344d"
+    },
+    "augment": {
+      "value": false,
+      "source": "withheld-local-ref-3ed1d55bbabe7e04344d"
+    },
+    "multi_scale": {
+      "value": false,
+      "source": "withheld-local-ref-3ed1d55bbabe7e04344d"
+    },
+    "single_scale": {
+      "value": true,
+      "source": "withheld-local-ref-3ed1d55bbabe7e04344d"
+    },
+    "workers": {
+      "value": 4,
+      "source": "withheld-local-ref-3ed1d55bbabe7e04344d"
+    },
+    "checkpoint_policy": {
+      "value": "terminal EMA after epoch 300",
+      "source": "withheld-local-ref-cfe3212b18d3ff89e90c"
+    },
+    "preprocessing": {
+      "value": "YOLOv5 validation preprocessing",
+      "source": "withheld-local-ref-44b7b28f829aabf05956"
+    },
+    "letterbox": {
+      "value": "rect=True for PyTorch validation, pad=0.5, stride=32",
+      "source": "withheld-local-ref-44b7b28f829aabf05956"
+    },
+    "class_order": {
+      "value": [
+        "pedestrian",
+        "people",
+        "bicycle",
+        "car",
+        "van",
+        "truck",
+        "tricycle",
+        "awning-tricycle",
+        "bus",
+        "motor"
+      ],
+      "source": "withheld-local-ref-44b7b28f829aabf05956"
+    },
+    "model_head_classes": {
+      "value": 10,
+      "source": "withheld-local-ref-44b7b28f829aabf05956"
+    }
+  },
+  "metric_semantics": {
+    "AP": "IoU thresholds 0.50:0.05:0.95 using the frozen COCO-style supplemental implementation where the VisDrone-specific ignored-region evaluator is not semantically transferable.",
+    "Recall": "YOLOv5 ap_per_class mean recall at the confidence index maximizing smoothed mean F1; matching correctness is computed at IoU thresholds 0.50:0.05:0.95 and the reported recall is the frozen YOLOv5 base Recall namespace.",
+    "precision_f1_source": "withheld-local-ref-1705a6d54100127619c1",
+    "recall_implementation": "withheld-local-ref-fdf05544751585cc4865",
+    "area_ranges": {
+      "small": [
+        0,
+        1024
+      ],
+      "medium": [
+        1024,
+        9216
+      ],
+      "large": [
+        9216,
+        10000000000
+      ]
+    }
+  },
+  "dataset_specific_rule": "Only ground-truth/class/ignore adaptation is permitted; model, head, preprocessing, NMS, and thresholds remain unchanged.",
+  "prompt_discrepancy": {
+    "field": "batch_size",
+    "prompt_expected": 1,
+    "verified_canonical_value": 16,
+    "decision": "USE_VERIFIED_CANONICAL_VALUE_16",
+    "evidence": "withheld-local-ref-3ed1d55bbabe7e04344d"
+  },
+  "evaluator_sources": [
+    {
+      "component": "primary_AP",
+      "path": "withheld-local-ref-c3d824583449505992e0",
+      "sha256": "3372AB7770AE14B47BBEC4CBF5CB29271DED04F72514A5A23727374C02D95D90",
+      "status": "PASS"
+    },
+    {
+      "component": "prediction_generation_and_base_metrics",
+      "path": "withheld-local-ref-e7e6a34dd88da1d180f2",
+      "sha256": "5125973974DA212DD0151C63DA71BCE2EF0EFDA00A657A0F2E7322C242AF3EDC",
+      "status": "PASS"
+    },
+    {
+      "component": "supplemental_area_metrics",
+      "path": "withheld-local-ref-7a87904c2e07f2373804",
+      "sha256": "9BD5E69F949B90EC41B7A8D274155E980EF0C90F53118E2CA5E1974E79DF6BF5",
+      "status": "PASS"
+    }
+  ],
+  "source_artifacts": [
+    {
+      "role": "stage10_validation.json",
+      "path": "withheld-local-ref-a2e158cebf6a2c6d7cf8",
+      "size_bytes": 689,
+      "sha256": "185EB1C548630F580DFDBFFA7FE3B6B097E99FA1C160CF76E3CFF542EB22C7D4"
+    },
+    {
+      "role": "final_training_manifest.json",
+      "path": "withheld-local-ref-cfe3212b18d3ff89e90c",
+      "size_bytes": 50611,
+      "sha256": "5E464B3C24A127CDAA454A04929876DCDB5844D10A069BF9A0C7D7AA62C60E02"
+    },
+    {
+      "role": "terminal_checkpoint_audit.json",
+      "path": "withheld-local-ref-11cd3b7871332e694e65",
+      "size_bytes": 13676,
+      "sha256": "FD35F88CBF9EEC481BBF141C4356448DAFA3678E53FA8F5872C5A08764FF971D"
+    },
+    {
+      "role": "evaluation_metric_lock.json",
+      "path": "withheld-local-ref-44b7b28f829aabf05956",
+      "size_bytes": 2472,
+      "sha256": "399FCC6DA2EC62F308DC7B0DAA40C25DBA6F1459DE45707ED0068B63F84E060F"
+    },
+    {
+      "role": "final_checkpoint_population.json",
+      "path": "withheld-local-ref-c74e7fe162bd157d3d20",
+      "size_bytes": 14647,
+      "sha256": "21DEA72294C984B9F8FFA17189F07ED269AEFB8E94A434768040A7E5E8EE78B1"
+    },
+    {
+      "role": "stage11_execution_lock.json",
+      "path": "withheld-local-ref-3ed1d55bbabe7e04344d",
+      "size_bytes": 2944,
+      "sha256": "93687F2BE9F3A03FEDCEBB2B06D71A17A15E66331402E42A6601FF250BDE6CC0"
+    },
+    {
+      "role": "evaluator_manifest.json",
+      "path": "withheld-local-ref-6231039a4f5f95121197",
+      "size_bytes": 2111,
+      "sha256": "391991702E91B704919CCC3FCE2C69C59D3FAA5B09335D85367A9E4FE1FD2CFD"
+    },
+    {
+      "role": "stage11_validation.json",
+      "path": "withheld-local-ref-4af6a2831ebd3ecdfb45",
+      "size_bytes": 857,
+      "sha256": "9428A90DE75AFF4C53D76C145EA80F835CFB7800A83CD540F411EE2F205FEB8C"
+    },
+    {
+      "role": "heldout_validation.json",
+      "path": "withheld-local-ref-d522661aa7c648883053",
+      "size_bytes": 1011,
+      "sha256": "75C9CEBFAF82F8B67FE7A87EA8765D78D781014FBDE794DA4E8872D09C203475"
+    },
+    {
+      "role": "PACKAGE_VALIDATION.json",
+      "path": "withheld-local-ref-ced78d90a07b47a3a0e3",
+      "size_bytes": 2346,
+      "sha256": "DDB23A02E6C8E5F0DA36C9B84A433F1DF088FF7BF110F28EAB51843C1567EF6C"
+    }
+  ]
+}

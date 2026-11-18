@@ -1,0 +1,12 @@
+{
+  "created_utc": "2026-07-27T21:29:39.210799+00:00",
+  "definition": "Recall(TargetManual-B6-reference, Recovery-8, seed42) - 0.002",
+  "recall_namespace": "YOLOv5 explicit FP32 evaluation on meta-inner-val1294",
+  "targetmanual_evaluation_id": "56BE5F026F6CC73710AA349C9E6505EEEF13D908ABC5402378860C686510A339",
+  "targetmanual_recall": 0.30235872606099606,
+  "offset": 0.002,
+  "recall_floor_f1": 0.30035872606099606,
+  "source_metrics_file": "withheld-local-ref-d563b8db19cb10487e5b",
+  "source_metrics_sha256": "3D37AB4A6D796C88A2579BF80C966477ACF08D1C332E700DAEC5DA4F8B367C00",
+  "status": "FROZEN"
+}

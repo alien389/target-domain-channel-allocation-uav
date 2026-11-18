@@ -1,0 +1,14 @@
+{
+  "schema": "stage15_external_run_manifest_v1",
+  "status": "PASS",
+  "dataset": "carpk",
+  "architecture": "RandomSearch-B6",
+  "seed": 43,
+  "checkpoint_sha256": "25A407136BBF3A9899A67697DE393D57AD69334080EB73FAE94A5706C93B9978",
+  "raw_prediction_path": "withheld-local-ref-733111681df8cea6277b",
+  "raw_prediction_sha256": "E721128B53A54B03F10076F974F58A4FCF4717606FA1B701558CA0B2E31F34B9",
+  "prediction_path": "withheld-local-ref-4f4252c9d17e59e4f05e",
+  "prediction_sha256": "716FEE8DCBB0F654838198438E27435939D96CC9A90F751CD161577FFA7FF7D8",
+  "metrics_path": "withheld-local-ref-b2aeef02b57ea71fa745",
+  "metrics_sha256": "FE7A4E72C5DE6604886C692FAFE6ECB8C9C5098BA13A6DD599593D72E3180E4F"
+}

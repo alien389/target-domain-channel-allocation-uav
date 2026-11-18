@@ -1,0 +1,10 @@
+{
+  "created_utc": "2026-08-06T03:19:25.866293+00:00",
+  "source": "TargetManual Recovery-50 explicit FP32 inner-val1294",
+  "targetmanual_recall_full_precision": "0.34464007603679842",
+  "offset": "0.002",
+  "recall_floor_f3_full_precision": "0.34264007603679842",
+  "f1_floor_reused": false,
+  "f2_floor_reused": false,
+  "status": "LOCKED"
+}
